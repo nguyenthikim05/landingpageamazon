@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -6,7 +6,7 @@
 
 @theme inline {
   --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-serif: "Noto Serif SC", "Noto Serif", Georgia, "Times New Roman", serif;
   --color-brand-primary: var(--brand-primary);
   --color-brand-primary-hover: var(--brand-primary-hover);
   --color-brand-accent: var(--brand-accent);
