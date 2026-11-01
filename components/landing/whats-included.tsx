@@ -10,13 +10,13 @@ export function WhatsIncluded() {
   return (
     <section id="set" className="scroll-mt-16 bg-white px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-12">
-        <div className="relative aspect-square overflow-hidden rounded-3xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4] lg:col-span-6">
+        <div className="group relative aspect-square overflow-hidden rounded-3xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30 lg:col-span-6">
           <Image
             src="/images/maytredan/whats-included.png"
             alt="MAYTREDAN What's Included: 1 Matching Holder and 6 Rattan Coasters"
             fill
             sizes="(min-width: 1024px) 540px, 90vw"
-            className="object-contain"
+            className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
           />
         </div>
         <div className="lg:col-span-6">

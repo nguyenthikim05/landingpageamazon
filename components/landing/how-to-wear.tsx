@@ -28,13 +28,13 @@ export function HowToWear() {
 
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-12">
           {/* Real image display */}
-          <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4] lg:col-span-6">
+          <div className="group relative aspect-square w-full overflow-hidden rounded-3xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30 lg:col-span-6">
             <Image
               src="/images/maytredan/care-steps.png"
               alt="MAYTREDAN product care guide: Place on table, set drinkware, wipe & dry, and store in holder"
               fill
               sizes="(min-width: 1024px) 540px, 90vw"
-              className="object-contain"
+              className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
             />
           </div>
 

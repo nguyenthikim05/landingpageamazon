@@ -63,13 +63,13 @@ export function GalleryCarousel() {
               key={slide.title}
               className="w-[82vw] shrink-0 snap-start sm:w-[360px] md:w-[420px]"
             >
-              <div className="relative aspect-square overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-[#E3D5C4]">
+              <div className="group relative aspect-square overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30">
                 <Image
                   src={slide.src}
                   alt={slide.alt}
                   fill
                   sizes="(min-width: 768px) 420px, 82vw"
-                  className="object-contain"
+                  className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
                 />
               </div>
               <div className="mt-4">

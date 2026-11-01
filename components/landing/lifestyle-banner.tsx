@@ -8,13 +8,13 @@ export function LifestyleBanner() {
 
   return (
     <section className="bg-white px-4 py-16 md:px-6 md:py-24">
-      <div className="relative mx-auto aspect-[4/5] max-w-6xl overflow-hidden rounded-3xl bg-[#35291F] sm:aspect-[16/9]">
+      <div className="group relative mx-auto aspect-[4/5] max-w-6xl overflow-hidden rounded-3xl bg-[#35291F] sm:aspect-[16/9]">
         <Image
           src="/images/maytredan/lifestyle-living.png"
           alt="MAYTREDAN Natural Beauty for Everyday Living - Living room coffee table setting"
           fill
           sizes="(min-width: 1152px) 1152px, 100vw"
-          className="object-cover opacity-90"
+          className="object-cover opacity-90 transition-transform duration-1000 ease-out group-hover:scale-105 motion-reduce:transform-none"
         />
         <div className="absolute inset-0 bg-[#35291F]/65" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 p-6 text-white md:p-12">

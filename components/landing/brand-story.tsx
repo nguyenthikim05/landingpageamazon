@@ -73,14 +73,14 @@ export function BrandStory() {
           {/* Right Column: Documentary Photography */}
           <div className="flex flex-col gap-8 lg:col-span-5">
             {/* Photo 1: Artisan Couple weaving circular coasters */}
-            <div className="group overflow-hidden rounded-3xl bg-white p-3">
+            <div className="group overflow-hidden rounded-3xl bg-white p-3 ring-1 ring-[#E3D5C4]/60 transition-colors duration-500 hover:ring-[#713B19]/30">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-[#EDE1D1]/30">
                 <Image
                   src="/images/maytredan/artisan-couple.jpg"
                   alt="Nghệ nhân Việt Nam đan tay từng chiếc lót ly mây tròn theo kỹ thuật truyền thống"
                   fill
                   sizes="(min-width: 1024px) 460px, 90vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
                 />
               </div>
               <p className="mt-3 px-2 text-xs leading-relaxed text-[#6B5849]">
@@ -89,14 +89,14 @@ export function BrandStory() {
             </div>
 
             {/* Photo 2: Craftswomen workshop */}
-            <div className="group overflow-hidden rounded-3xl bg-white p-3">
+            <div className="group overflow-hidden rounded-3xl bg-white p-3 ring-1 ring-[#E3D5C4]/60 transition-colors duration-500 hover:ring-[#713B19]/30">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-[#EDE1D1]/30">
                 <Image
                   src="/images/maytredan/artisan-workshop.jpg"
                   alt="Không gian làng nghề mây tre đan truyền thống Việt Nam nơi nghệ nhân đan lát tỉ mỉ"
                   fill
                   sizes="(min-width: 1024px) 460px, 90vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
                 />
               </div>
               <p className="mt-3 px-2 text-xs leading-relaxed text-[#6B5849]">

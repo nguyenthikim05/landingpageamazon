@@ -48,13 +48,13 @@ export function SizeGuide() {
 
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-12">
           {/* Real image display */}
-          <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-[#E3D5C4] lg:col-span-6">
+          <div className="group relative aspect-square w-full overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30 lg:col-span-6">
             <Image
               src="/images/maytredan/dimensions-4inch.png"
               alt="MAYTREDAN 4-inch (10.16 cm) coaster diameter dimensions with coffee mugs, tea cups and glasses"
               fill
               sizes="(min-width: 1024px) 540px, 90vw"
-              className="object-contain"
+              className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
             />
           </div>
 

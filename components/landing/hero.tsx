@@ -51,14 +51,14 @@ export function Hero() {
         </div>
 
         <div className="relative flex items-center justify-center">
-          <div className="relative aspect-square w-full max-w-[380px] overflow-hidden rounded-3xl bg-white/5 p-4 ring-1 ring-white/15 sm:max-w-[420px] md:max-w-[440px] lg:max-w-[500px] xl:max-w-[540px]">
+          <div className="group relative aspect-square w-full max-w-[380px] overflow-hidden rounded-3xl bg-white/5 p-4 ring-1 ring-white/15 transition-colors duration-500 hover:ring-[#D5AB75]/40 sm:max-w-[420px] md:max-w-[440px] lg:max-w-[500px] xl:max-w-[540px]">
             <Image
               src="/images/maytredan/hero.png"
               alt="MAYTREDAN handmade natural rattan coaster set with matching round holder"
               fill
               priority
               sizes="(min-width: 1280px) 540px, (min-width: 1024px) 500px, (min-width: 768px) 440px, 90vw"
-              className="object-contain"
+              className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
             />
           </div>
         </div>
