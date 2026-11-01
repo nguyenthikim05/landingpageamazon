@@ -157,7 +157,7 @@ export const contentEN: CoasterContent = {
   },
   hero: {
     eyebrow: 'Handwoven in Vietnam',
-    headline: 'A Little Nature,\nA Lot of Warmth.',
+    headline: 'A Little Nature, A Lot of Warmth.',
     subheadline:
       'Bring natural texture and timeless charm to everyday coffee and tea moments with a set of six handwoven rattan coasters and a matching holder.',
     primaryCTA: 'Shop Now',
@@ -184,7 +184,7 @@ export const contentEN: CoasterContent = {
   },
   benefits: {
     eyebrow: 'Why MAYTREDAN',
-    heading: 'Thoughtfully Woven\nfor Everyday Living',
+    heading: 'Thoughtfully Woven for Everyday Living',
     description:
       'Made from natural rattan and shaped with a traditional circular weave, each coaster brings an inviting handcrafted touch to your tabletop.',
     items: [
@@ -216,13 +216,13 @@ export const contentEN: CoasterContent = {
   },
   lifestyle: {
     eyebrow: 'Everyday Styling',
-    heading: 'The Small Details\nMake a Space Feel Like Home',
+    heading: 'The Small Details Make a Space Feel Like Home',
     body:
       'Style your coffee corner, dining table or afternoon tea setting with the relaxed charm and organic texture of natural rattan.',
   },
   care: {
     eyebrow: 'Product Care',
-    heading: 'Simple Care\nfor Natural Rattan',
+    heading: 'Simple Care for Natural Rattan',
     description:
       'Preserve the organic texture and honey-brown finish of handwoven rattan with straightforward, mindful care routines.',
     steps: [
@@ -253,7 +253,7 @@ export const contentEN: CoasterContent = {
   },
   dimensions: {
     eyebrow: 'Dimensions & Sizing',
-    heading: 'Dimensions &\nDrinkware Fit Guide',
+    heading: 'Dimensions & Drinkware Fit Guide',
     description:
       'Each round coaster measures approximately 4 inches (10 cm) across, sized to protect your surfaces and cradle everyday mugs, glasses, and tea sets.',
     checkerTitle: 'Cup Base Fit Checker',
@@ -274,7 +274,7 @@ export const contentEN: CoasterContent = {
   },
   whatsIncluded: {
     eyebrow: 'The Complete Set',
-    heading: "What's Included\nin Your Set",
+    heading: "What's Included in Your Set",
     description:
       'Each MAYTREDAN set arrives coordinated and ready for daily use, keeping your surfaces protected and your coffee table tidy.',
     items: [
@@ -381,7 +381,7 @@ export const contentEN: CoasterContent = {
   },
   craftStory: {
     eyebrow: 'Vietnamese Artisan Heritage',
-    title: 'Discover the Art of\nRattan Weaving',
+    title: 'Discover the Art of Rattan Weaving',
     subtitle: 'Centuries of craft heritage, woven into everyday moments.',
     intro:
       'In Vietnam, traditional rattan and bamboo weaving embodies centuries of patience, creativity, and artisan skill passed down through generations. Across generations, Vietnamese artisans have transformed natural vines into household goods that are as practical as they are enduringly beautiful.',
@@ -406,7 +406,7 @@ export const contentEN: CoasterContent = {
   },
   story: {
     eyebrow: 'Our Story & Mission',
-    heading: 'Vietnamese Craftsmanship,\nNatural Living',
+    heading: 'Vietnamese Craftsmanship, Natural Living',
     body:
       'MAYTREDAN celebrates the beauty of Vietnamese weaving traditions through practical home essentials. We pair natural materials with thoughtful, understated design to bring warmth and character into modern living spaces.',
     giftingTitle: 'A Thoughtful Gift for a Cozy Home',
@@ -461,7 +461,7 @@ export const contentVI: CoasterContent = {
   },
   hero: {
     eyebrow: 'Đan Thủ Công Tại Việt Nam',
-    headline: 'Chút Chạm Tự Nhiên,\nTrọn Vẹn Ấm Áp.',
+    headline: 'Chút Chạm Tự Nhiên, Trọn Vẹn Ấm Áp.',
     subheadline:
       'Mang nét mộc mạc tự nhiên và vẻ đẹp vượt thời gian vào từng khoảnh khắc thưởng trà, cà phê mỗi ngày với bộ sáu miếng lót ly mây đan thủ công kèm khay đựng đồng bộ.',
     primaryCTA: 'Đặt Mua Ngay',
@@ -488,7 +488,7 @@ export const contentVI: CoasterContent = {
   },
   benefits: {
     eyebrow: 'Lý Do Chọn MAYTREDAN',
-    heading: 'Chăm Chút Từng Mối Đan\nCho Cuộc Sống Thường Nhật',
+    heading: 'Chăm Chút Từng Mối Đan Cho Cuộc Sống Thường Nhật',
     description:
       'Được làm từ sợi mây tự nhiên và tạo hình với kỹ thuật đan tròn truyền thống, mỗi chiếc lót ly mang đến nét mộc mạc và cảm giác ấm cúng cho không gian sống của bạn.',
     items: [
@@ -520,13 +520,13 @@ export const contentVI: CoasterContent = {
   },
   lifestyle: {
     eyebrow: 'Bài Trí Thường Nhật',
-    heading: 'Những Chi Tiết Nhỏ\nTạo Nên Sự Ấm Cúng Của Tổ Ấm',
+    heading: 'Những Chi Tiết Nhỏ Tạo Nên Sự Ấm Cúng Của Tổ Ấm',
     body:
       'Tô điểm góc cà phê sáng, bàn ăn gia đình hay buổi trà chiều thư thái với nét duyên dáng nhẹ nhàng và vẻ đẹp mộc mạc của chất liệu mây tự nhiên.',
   },
   care: {
     eyebrow: 'Hướng Dẫn Bảo Quản',
-    heading: 'Chăm Sóc Sản Phẩm Mây\nĐúng Cách & Bền Đẹp',
+    heading: 'Chăm Sóc Sản Phẩm Mây Đúng Cách & Bền Đẹp',
     description:
       'Gìn giữ độ bền đẹp và sắc nâu mật ong óng ả của mây thủ công với các bước chăm sóc đơn giản và nhẹ nhàng.',
     steps: [
@@ -557,7 +557,7 @@ export const contentVI: CoasterContent = {
   },
   dimensions: {
     eyebrow: 'Kích Thước & Độ Vừa Vặn',
-    heading: 'Thông Số & Hướng Dẫn\nVừa Vặn Cho Ly Cốc',
+    heading: 'Thông Số & Hướng Dẫn Vừa Vặn Cho Ly Cốc',
     description:
       'Mỗi chiếc lót ly có đường kính xấp xỉ 4 inches (~10 cm), được tính toán tỉ mỉ để bảo vệ mặt bàn và nâng đỡ êm ái các loại ly, cốc, tách trà thông dụng.',
     checkerTitle: 'Kiểm Tra Độ Vừa Đáy Ly',
@@ -578,7 +578,7 @@ export const contentVI: CoasterContent = {
   },
   whatsIncluded: {
     eyebrow: 'Trọn Bộ Sản Phẩm',
-    heading: 'Chi Tiết Trọn Bộ\n7 Món Trong Hộp',
+    heading: 'Chi Tiết Trọn Bộ 7 Món Trong Hộp',
     description:
       'Mỗi bộ sản phẩm MAYTREDAN được chuẩn bị đồng bộ và chu đáo, sẵn sàng bảo vệ mặt bàn và giữ không gian sống luôn ngăn nắp, trang nhã.',
     items: [
@@ -685,7 +685,7 @@ export const contentVI: CoasterContent = {
   },
   craftStory: {
     eyebrow: 'Di Sản Làng Nghề Thủ Công',
-    title: 'Khám Phá Nghệ Thuật\nMây Tre Đan',
+    title: 'Khám Phá Nghệ Thuật Mây Tre Đan',
     subtitle: 'Di sản hàng trăm năm, đan dệt trong từng khoảnh khắc đời thường.',
     intro:
       'Tại Việt Nam, nghề mây tre đan không chỉ đơn thuần là một nghề thủ công truyền thống mà còn là biểu tượng của sự kiên nhẫn, sáng tạo và đôi bàn tay khéo léo, được gìn giữ và truyền lại qua nhiều thế hệ. Trải qua hàng trăm năm, những người nghệ nhân Việt Nam đã biến những sợi mây tre tự nhiên thành các sản phẩm vừa đẹp mắt, vừa hữu ích trong cuộc sống hằng ngày.',
@@ -710,7 +710,7 @@ export const contentVI: CoasterContent = {
   },
   story: {
     eyebrow: 'Câu Chuyện & Sứ Mệnh',
-    heading: 'Nghệ Thuật Mây Đan Thủ Công Việt Nam,\nSống Thuận Tự Nhiên',
+    heading: 'Nghệ Thuật Mây Đan Thủ Công Việt Nam, Sống Thuận Tự Nhiên',
     body:
       'MAYTREDAN tôn vinh vẻ đẹp của làng nghề mây đan truyền thống Việt Nam qua những vật dụng thường nhật hữu ích. Chúng tôi kết hợp nguyên liệu tự nhiên với thiết kế mộc mạc, tinh tế để mang lại sự ấm áp và dấu ấn riêng cho không gian sống hiện đại.',
     giftingTitle: 'Món Quà Tinh Tế Cho Tổ Ấm Yêu Thương',

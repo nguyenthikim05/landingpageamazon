@@ -11,16 +11,12 @@ export function BrandStory() {
     <section id="story" className="scroll-mt-16 bg-[#FBF8F2] px-4 py-20 text-[#35291F] md:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         {/* Header Block */}
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
             {s.eyebrow}
           </span>
-          <h2 className="mt-3 font-serif text-3xl font-extrabold tracking-tight text-[#35291F] sm:text-4xl md:text-5xl leading-[1.18]">
-            {s.title.split('\n').map((line, i) => (
-              <span key={i} className="block">
-                {line}
-              </span>
-            ))}
+          <h2 className="mt-3 font-serif text-2xl font-extrabold tracking-tight text-[#35291F] sm:text-3xl md:text-4xl lg:text-[44px] leading-[1.18]">
+            {s.title}
           </h2>
           <p className="mt-4 font-serif text-lg italic text-[#713B19] md:text-xl">
             {s.subtitle}

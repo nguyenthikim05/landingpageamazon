@@ -23,12 +23,8 @@ export function GetStarted() {
         <span className="mt-8 inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#D5AB75]">
           {t.story.eyebrow}
         </span>
-        <h2 className="mt-3 font-serif text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl leading-[1.2]">
-          {t.story.heading.split('\n').map((line, i) => (
-            <span key={i} className="block">
-              {line}
-            </span>
-          ))}
+        <h2 className="mt-3 font-serif text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[42px] leading-[1.2]">
+          {t.story.heading}
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#EDE1D1] md:text-lg">
           {t.story.body}

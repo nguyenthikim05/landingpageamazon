@@ -23,12 +23,8 @@ export function WhatsIncluded() {
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
             {t.whatsIncluded.eyebrow}
           </span>
-          <h2 className="mt-3 font-serif text-3xl font-extrabold tracking-tight text-[#35291F] md:text-4xl leading-[1.2]">
-            {t.whatsIncluded.heading.split('\n').map((line, i) => (
-              <span key={i} className="block">
-                {line}
-              </span>
-            ))}
+          <h2 className="mt-3 font-serif text-2xl font-extrabold tracking-tight text-[#35291F] sm:text-3xl md:text-[32px] lg:text-[34px] xl:text-4xl leading-[1.2]">
+            {t.whatsIncluded.heading}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-[#6B5849] md:text-lg">
             {t.whatsIncluded.description}
