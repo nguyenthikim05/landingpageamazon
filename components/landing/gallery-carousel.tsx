@@ -101,22 +101,24 @@ export function GalleryCarousel() {
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
         >
-          {/* Nút Prev bên trái ảnh */}
+          {/* Nút Prev bên mép trái ảnh */}
           <button
             type="button"
             onClick={() => scroll(-1)}
             aria-label="Previous slide"
-            className="cta-btn absolute -left-2 top-[38%] z-20 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#35291F] ring-1 ring-[#E3D5C4] transition-colors hover:bg-[#713B19] hover:text-white active:scale-90 active:translate-y-0.5 sm:-left-4 lg:-left-6"
+            style={{ top: '38%' }}
+            className="absolute left-1 sm:-left-3 lg:-left-6 -translate-y-1/2 z-30 flex size-12 cursor-pointer items-center justify-center rounded-full bg-white text-[#35291F] ring-1 ring-[#E3D5C4] transition-colors hover:bg-[#713B19] hover:text-white active:scale-95"
           >
             <ChevronLeft className="size-6" aria-hidden="true" />
           </button>
 
-          {/* Nút Next bên phải ảnh */}
+          {/* Nút Next bên mép phải ảnh */}
           <button
             type="button"
             onClick={() => scroll(1)}
             aria-label="Next slide"
-            className="cta-btn absolute -right-2 top-[38%] z-20 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#35291F] ring-1 ring-[#E3D5C4] transition-colors hover:bg-[#713B19] hover:text-white active:scale-90 active:translate-y-0.5 sm:-right-4 lg:-right-6"
+            style={{ top: '38%' }}
+            className="absolute right-1 sm:-right-3 lg:-right-6 -translate-y-1/2 z-30 flex size-12 cursor-pointer items-center justify-center rounded-full bg-white text-[#35291F] ring-1 ring-[#E3D5C4] transition-colors hover:bg-[#713B19] hover:text-white active:scale-95"
           >
             <ChevronRight className="size-6" aria-hidden="true" />
           </button>
