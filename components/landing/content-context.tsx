@@ -157,7 +157,7 @@ export const contentEN: CoasterContent = {
   },
   hero: {
     eyebrow: 'Handwoven in Vietnam',
-    headline: 'A Little Nature, A Lot of Warmth.',
+    headline: 'A Little Nature,\nA Lot of Warmth.',
     subheadline:
       'Bring natural texture and timeless charm to everyday coffee and tea moments with a set of six handwoven rattan coasters and a matching holder.',
     primaryCTA: 'Shop Now',
@@ -461,7 +461,7 @@ export const contentVI: CoasterContent = {
   },
   hero: {
     eyebrow: 'Đan Thủ Công Tại Việt Nam',
-    headline: 'Chút Chạm Tự Nhiên, Trọn Vẹn Ấm Áp.',
+    headline: 'Chút Chạm Tự Nhiên,\nTrọn Vẹn Ấm Áp.',
     subheadline:
       'Mang nét mộc mạc tự nhiên và vẻ đẹp vượt thời gian vào từng khoảnh khắc thưởng trà, cà phê mỗi ngày với bộ sáu miếng lót ly mây đan thủ công kèm khay đựng đồng bộ.',
     primaryCTA: 'Đặt Mua Ngay',
