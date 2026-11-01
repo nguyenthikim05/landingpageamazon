@@ -20,19 +20,17 @@ export function GalleryCarousel() {
   return (
     <section id="gallery" className="scroll-mt-16 bg-[#EDE1D1]/40 py-20 md:py-28" aria-roledescription="carousel" aria-label="Product Gallery">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="mb-10 flex items-end justify-between gap-4">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
-              {t.gallery.eyebrow}
-            </span>
-            <h2 className="mt-2 font-serif text-3xl font-extrabold tracking-tight text-[#35291F] md:text-4xl">
-              {t.gallery.heading}
-            </h2>
-            <p className="mt-2 text-base text-[#6B5849]">
-              {t.gallery.description}
-            </p>
-          </div>
-          <div className="flex gap-2">
+        <div className="mb-10 text-center">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
+            {t.gallery.eyebrow}
+          </span>
+          <h2 className="mt-2 font-serif text-3xl font-extrabold tracking-tight text-[#35291F] md:text-4xl">
+            {t.gallery.heading}
+          </h2>
+          <p className="mx-auto mt-2 max-w-2xl text-base text-[#6B5849]">
+            {t.gallery.description}
+          </p>
+          <div className="mt-6 flex items-center justify-center gap-3">
             <button
               type="button"
               onClick={() => scroll(-1)}

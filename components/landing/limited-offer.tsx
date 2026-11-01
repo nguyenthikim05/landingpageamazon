@@ -22,7 +22,11 @@ export function LimitedOffer() {
           {t.limitedOffer.headline}
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[#6B5849] sm:text-base">
-          {t.limitedOffer.subheadline}
+          {t.limitedOffer.subheadline.split('\n').map((line, i) => (
+            <span key={i} className="block">
+              {line}
+            </span>
+          ))}
         </p>
 
         {/* Counter */}

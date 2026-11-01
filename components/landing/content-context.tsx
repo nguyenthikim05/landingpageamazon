@@ -173,7 +173,7 @@ export const contentEN: CoasterContent = {
     badge: 'SET OF 6 COASTERS + MATCHING HOLDER',
     headline: 'Vietnamese Craftsmanship, Natural Living',
     subheadline:
-      'Handwoven from 100% natural Vietnamese rattan. Reserve your set today with direct inquiry, or check back for live Amazon availability.',
+      'Handwoven from 100% natural Vietnamese rattan.\nReserve your set today with direct inquiry, or check back for live Amazon availability.',
     days: 'Days',
     hours: 'Hours',
     mins: 'Mins',
@@ -477,7 +477,7 @@ export const contentVI: CoasterContent = {
     badge: 'BỘ 6 LÓT LY + 1 KHAY ĐỰNG ĐỒNG BỘ',
     headline: 'Tinh hoa thủ công Việt – Vẻ đẹp sống tự nhiên.',
     subheadline:
-      'Được đan hoàn toàn bằng tay từ 100% mây tự nhiên tại các làng nghề Việt Nam. Đăng ký giữ bộ sản phẩm hoặc nhận thông báo mở bán chính thức.',
+      'Được đan hoàn toàn bằng tay từ 100% mây tự nhiên tại các làng nghề Việt Nam.\nĐăng ký giữ bộ sản phẩm hoặc nhận thông báo mở bán chính thức.',
     days: 'Ngày',
     hours: 'Giờ',
     mins: 'Phút',

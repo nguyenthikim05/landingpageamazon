@@ -53,23 +53,22 @@ export function SiteHeader() {
             <span className="hidden md:inline font-medium tracking-wider text-[#D5AB75] uppercase">
               {lang === 'vi' ? 'Tinh hoa thủ công Việt' : 'Vietnamese Craftsmanship'}
             </span>
-            <div className="flex items-center gap-1.5 font-bold">
+            <div className="inline-flex items-center rounded-full bg-white/10 p-0.5 ring-1 ring-white/15 text-[10px] font-bold">
               <button
                 type="button"
                 onClick={() => setLang('vi')}
-                className={`transition-colors ${
-                  lang === 'vi' ? 'text-[#D5AB75]' : 'text-white/60 hover:text-white'
+                className={`rounded-full px-2.5 py-0.5 transition-colors ${
+                  lang === 'vi' ? 'bg-[#D5AB75] text-[#35291F]' : 'text-[#EDE1D1] hover:text-white'
                 }`}
                 aria-label="Tiếng Việt"
               >
                 VI
               </button>
-              <span className="text-white/30">|</span>
               <button
                 type="button"
                 onClick={() => setLang('en')}
-                className={`transition-colors ${
-                  lang === 'en' ? 'text-[#D5AB75]' : 'text-white/60 hover:text-white'
+                className={`rounded-full px-2.5 py-0.5 transition-colors ${
+                  lang === 'en' ? 'bg-[#D5AB75] text-[#35291F]' : 'text-[#EDE1D1] hover:text-white'
                 }`}
                 aria-label="English"
               >
