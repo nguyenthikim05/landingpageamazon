@@ -1,47 +1,36 @@
-import Image from 'next/image'
+'use client'
 
-const materials = [
-  {
-    title: 'Lưới Tổ Ong Thoáng Khí (Back Panel)',
-    detail: 'Chất liệu polyester dệt tổ ong đa tầng giúp không khí lưu thông tối đa, giảm tích tụ mồ hôi và giữ lưng luôn khô thoáng dù đeo suốt nhiều giờ làm việc.',
-    tag: 'Breathable Mesh',
-  },
-  {
-    title: 'Đệm Mút Êm Giảm Áp Lực Vai',
-    detail: 'Khu vực quai đeo tiếp xúc vai và nách được gia cố lớp đệm xốp mềm dẻo, ngăn ngừa hiện tượng cấn rát hay tì đè khi cử động.',
-    tag: 'Soft Foam Padding',
-  },
-  {
-    title: 'Dây Đai Nylon Co Giãn & Khóa Dán',
-    detail: 'Dây dán hook-and-loop chịu lực cao cho phép tùy chỉnh lực kéo vừa vặn với từng vóc dáng mà không bị xê dịch khi hoạt động.',
-    tag: 'Flexible & Secure Fit',
-  },
-  {
-    title: 'Công Thái Học Định Hình Tự Nhiên',
-    detail: 'Tác động kéo nhẹ nhàng vào hai bên vai giúp cơ thể tự động căn chỉnh trục cột sống trên một cách tự nhiên, không gò bó.',
-    tag: 'Upper-Back Support',
-  },
-]
+import Image from 'next/image'
+import { useLanguage } from './content-context'
 
 export function Features() {
+  const { t } = useLanguage()
+
   return (
-    <section id="dac-diem" className="scroll-mt-16 bg-slate-50 px-4 py-20 text-slate-900 md:px-6 md:py-28">
+    <section id="benefits" className="scroll-mt-16 bg-[#EDE1D1]/40 px-4 py-20 text-[#35291F] md:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-            Thiết Kế Thoáng Khí & Êm Ái Cho Thường Nhật
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
+            {t.benefits.eyebrow}
+          </span>
+          <h2 className="mt-3 font-serif text-3xl font-extrabold tracking-tight text-[#35291F] md:text-4xl leading-[1.2]">
+            {t.benefits.heading.split('\n').map((line, i) => (
+              <span key={i} className="block">
+                {line}
+              </span>
+            ))}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
-            Mỗi chi tiết trên đai VELNURIO đều được chế tác từ vật liệu bền nhẹ, ưu tiên trải nghiệm đeo êm dịu và tính tiện dụng cao nhất.
+          <p className="mt-4 text-base leading-relaxed text-[#6B5849] md:text-lg">
+            {t.benefits.description}
           </p>
         </div>
 
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-12">
           {/* Real image display */}
-          <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-slate-200/80 lg:col-span-6">
+          <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-[#E3D5C4] lg:col-span-6">
             <Image
-              src="/images/velnurio/product-features.webp"
-              alt="Cận cảnh các chi tiết lưới thoáng khí, đệm mút và quai dán đai VELNURIO"
+              src="/images/maytredan/features-craft.png"
+              alt="MAYTREDAN natural rattan, handwoven texture and traditional weaving pattern details"
               fill
               sizes="(min-width: 1024px) 540px, 90vw"
               className="object-contain"
@@ -50,15 +39,15 @@ export function Features() {
 
           {/* Asymmetrical feature specifications */}
           <div className="flex flex-col gap-8 lg:col-span-6 lg:pl-4">
-            {materials.map((item, index) => (
+            {t.benefits.items.map((item, index) => (
               <div key={item.title} className="group">
                 <div className="flex items-baseline gap-3">
-                  <span className="text-xs font-bold text-sky-600">[{index + 1}]</span>
-                  <h3 className="text-lg font-bold text-slate-900 md:text-xl">
+                  <span className="text-xs font-bold text-[#713B19]">[{index + 1}]</span>
+                  <h3 className="font-serif text-lg font-bold text-[#35291F] md:text-xl">
                     {item.title}
                   </h3>
                 </div>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600 md:text-base">
+                <p className="mt-2 text-sm leading-relaxed text-[#6B5849] md:text-base">
                   {item.detail}
                 </p>
               </div>

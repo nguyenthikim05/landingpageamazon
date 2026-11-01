@@ -1,39 +1,51 @@
+'use client'
+
 import Image from 'next/image'
 import { OrderForm } from './order-form'
+import { useLanguage } from './content-context'
 
 export function GetStarted() {
+  const { t } = useLanguage()
+
   return (
-    <footer id="dat-hang" className="scroll-mt-16 bg-navy text-navy-foreground">
+    <section id="order" className="scroll-mt-16 bg-[#713B19] text-white">
       <div className="mx-auto max-w-5xl px-4 py-20 text-center md:px-6 md:py-28">
-        <div className="relative mx-auto aspect-square w-20">
+        <div className="relative mx-auto aspect-[3/1] w-48 overflow-hidden rounded-xl bg-[#FBF8F2] p-2 ring-1 ring-[#D5AB75]">
           <Image
-            src="/images/velnurio/brand-logo.webp"
-            alt="Logo VELNURIO – Smart Solutions for Everyday Living"
+            src="/assets/maytredan-logo-original.png"
+            alt="MAYTREDAN Official Logo – Vietnamese Craftsmanship, Natural Living"
             fill
-            sizes="80px"
+            sizes="192px"
             className="object-contain"
           />
         </div>
-        <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-white md:text-5xl text-balance">
-          Sẵn Sàng Đồng Hành Cùng Tư Thế Chuẩn?
+
+        <span className="mt-8 inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#D5AB75]">
+          {t.story.eyebrow}
+        </span>
+        <h2 className="mt-3 font-serif text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl leading-[1.2]">
+          {t.story.heading.split('\n').map((line, i) => (
+            <span key={i} className="block">
+              {line}
+            </span>
+          ))}
         </h2>
-        <p className="mx-auto mt-4 max-w-lg text-base text-slate-300 md:text-lg">
-          Đăng ký thông tin để nhận tư vấn chọn kích cỡ và thông báo tình trạng sẵn hàng từ thương hiệu VELNURIO.
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#EDE1D1] md:text-lg">
+          {t.story.body}
         </p>
 
-        <div className="mt-10">
+        {/* Gifting note */}
+        <div className="mx-auto mt-8 max-w-xl rounded-2xl bg-white/10 p-5 ring-1 ring-white/15 text-left text-sm text-[#EDE1D1]">
+          <p className="font-serif font-bold text-white text-base">{t.story.giftingTitle}</p>
+          <p className="mt-1 text-xs text-[#EDE1D1]/90 md:text-sm">
+            {t.story.giftingBody}
+          </p>
+        </div>
+
+        <div className="mt-12">
           <OrderForm />
         </div>
       </div>
-
-      <div className="bg-slate-950/40">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-xs text-slate-400 md:flex-row md:px-6 md:text-sm">
-          <p>© 2026 VELNURIO. Smart Solutions for Everyday Living. Bảo lưu mọi quyền.</p>
-          <p className="text-slate-400">
-            Sản phẩm hỗ trợ thói quen tư thế thường nhật. Không thay thế chẩn đoán y khoa.
-          </p>
-        </div>
-      </div>
-    </footer>
+    </section>
   )
 }

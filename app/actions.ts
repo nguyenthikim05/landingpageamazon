@@ -5,21 +5,19 @@ export type OrderState = {
   message: string
 }
 
-const PHONE_PATTERN = /^(0|\+84)[0-9]{9,10}$/
-
 export async function submitOrder(_prev: OrderState, formData: FormData): Promise<OrderState> {
   const name = String(formData.get('name') ?? '').trim()
-  const phone = String(formData.get('phone') ?? '').replace(/[\s.-]/g, '')
+  const contact = String(formData.get('phone') ?? '').trim()
 
   if (name.length < 2 || name.length > 80) {
-    return { status: 'error', message: 'Vui lòng nhập họ tên hợp lệ.' }
+    return { status: 'error', message: 'Vui lòng nhập họ và tên hợp lệ.' }
   }
-  if (!PHONE_PATTERN.test(phone)) {
-    return { status: 'error', message: 'Số điện thoại chưa đúng định dạng.' }
+  if (contact.length < 5 || contact.length > 50) {
+    return { status: 'error', message: 'Vui lòng cung cấp số điện thoại hoặc email liên hệ hợp lệ.' }
   }
 
   return {
     status: 'success',
-    message: `Cảm ơn ${name}! Chúng tôi sẽ gọi lại cho bạn trong ít phút để xác nhận đơn hàng.`,
+    message: `Cảm ơn ${name}! Yêu cầu của bạn cho Bộ lót ly mây đan MAYTREDAN đã được ghi nhận thành công. Đội ngũ chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.`,
   }
 }

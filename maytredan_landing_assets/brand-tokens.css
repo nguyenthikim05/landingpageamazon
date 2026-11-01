@@ -1,0 +1,18 @@
+/* MAYTREDAN | Brand overrides. Import AFTER the original site CSS. */
+:root {
+  --brand-primary: #713B19;
+  --brand-primary-hover: #562C13;
+  --brand-accent: #D5AB75;
+  --brand-background: #FBF8F2;
+  --brand-surface: #FFFFFF;
+  --brand-section-alt: #EDE1D1;
+  --brand-text: #35291F;
+  --brand-text-muted: #6B5849;
+  --brand-border: #E3D5C4;
+  --brand-on-primary: #FFFFFF;
+  --brand-font-heading: Georgia, 'Times New Roman', serif;
+  --brand-font-body: Arial, Helvetica, sans-serif;
+}
+/* Map the existing site's tokens to these variables without overriding layout.
+   Avoid blanket button, header, body or section selectors if the template
+   already has specific styling. Keep original breakpoints and interactions. */

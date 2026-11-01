@@ -1,27 +1,35 @@
-import { Analytics } from '@vercel/analytics/next'
+﻿import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { CtaRippleListener } from '@/components/landing/cta-ripple'
 import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
-  title: 'VELNURIO – Đai Hỗ Trợ Tư Thế Lưng & Vai Công Thái Học',
+  title: 'Bộ Lót Ly Mây Đan Thủ Công Kèm Khay Đựng | MAYTREDAN',
   description:
-    'Đai hỗ trợ tư thế VELNURIO chính hãng với lưới thoáng khí, đệm mút êm ái, đai dán điều chỉnh linh hoạt. Giúp duy trì tư thế ngồi thẳng tự nhiên khi làm việc và học tập.',
+    'Khám phá bộ lót ly mây đan tự nhiên MAYTREDAN. Bộ 6 miếng lót ly kèm khay đựng đồng bộ, đan thủ công tại Việt Nam, mang vẻ đẹp mộc mạc và ấm áp cho không gian sống.',
   generator: 'v0.app',
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/assets/favicon-64.png', sizes: '64x64', type: 'image/png' },
+      { url: '/favicon.png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
-    title: 'VELNURIO – Smart Solutions for Everyday Living',
-    description: 'Đai hỗ trợ tư thế lưng trên và vai thoáng khí, thiết kế công thái học hiện đại.',
-    images: ['/images/velnurio/product-main.webp'],
+    title: 'Bộ Lót Ly Mây Đan Thủ Công Kèm Khay Đựng | MAYTREDAN',
+    description:
+      'Mang nét mộc mạc tự nhiên và vẻ đẹp vượt thời gian vào từng khoảnh khắc thưởng trà, cà phê mỗi ngày với bộ 6 miếng lót ly mây đan thủ công và khay đựng đồng bộ.',
+    images: ['/images/maytredan/hero.png'],
   },
 }
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#0c1929',
+  themeColor: '#713B19',
 }
 
 export default function RootLayout({

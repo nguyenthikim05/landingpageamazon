@@ -1,0 +1,159 @@
+{
+  "brand": {
+    "name": "MAYTREDAN",
+    "slogan": "Vietnamese Craftsmanship, Natural Living",
+    "positioning": "Vietnamese Handcrafted Home Essentials",
+    "origin": "Vietnam",
+    "logo": "assets/maytredan-logo-original.png",
+    "favicon": "assets/favicon-64.png"
+  },
+  "product": {
+    "name": "Handmade Rattan Coaster Set",
+    "fullName": "MAYTREDAN Handmade Rattan Coaster Set with Holder",
+    "priceUSD": 23.59,
+    "currency": "USD",
+    "quantityCoasters": 6,
+    "holderQuantity": 1,
+    "approxDiameterCm": 10,
+    "approxDiameterInches": 4,
+    "material": "Natural rattan (mây guột)",
+    "color": "Natural honey-brown",
+    "note": "Handwoven pieces may vary slightly in color and weave details. Size approximately 10 cm; confirm final measurements before publishing."
+  },
+  "navigation": {
+    "shop": "Shop",
+    "benefits": "Why MAYTREDAN",
+    "story": "Our Story",
+    "faq": "FAQs"
+  },
+  "hero": {
+    "eyebrow": "HANDWOVEN IN VIETNAM",
+    "headline": "A Little Nature, A Lot of Warmth.",
+    "subheadline": "Bring natural texture and timeless charm to everyday coffee and tea moments with a set of six handwoven rattan coasters and a matching holder.",
+    "primaryCTA": "Shop Now",
+    "secondaryCTA": "Discover Our Craft",
+    "priceLabel": "$23.59",
+    "setLabel": "Set of 6 Coasters + Matching Holder"
+  },
+  "benefits": [
+    {
+      "title": "Natural Rattan",
+      "text": "Warm, organic texture and a natural honey-brown finish."
+    },
+    {
+      "title": "Handwoven Craftsmanship",
+      "text": "Traditional woven detailing gives each coaster its individual character."
+    },
+    {
+      "title": "A Complete Set",
+      "text": "Six round coasters with a matching holder for tidy storage."
+    },
+    {
+      "title": "Made for Everyday Spaces",
+      "text": "An understated accent for coffee tables, dining areas and tea corners."
+    }
+  ],
+  "productDetails": {
+    "heading": "Thoughtfully Woven for Everyday Living",
+    "description": "Made from natural rattan and shaped with a traditional circular weave, each coaster brings an inviting handcrafted touch to the table. The included holder keeps the six-piece set neatly together.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Natural Rattan"
+      },
+      {
+        "label": "Set Includes",
+        "value": "6 Coasters + 1 Matching Holder"
+      },
+      {
+        "label": "Coaster Diameter",
+        "value": "Approx. 4 in / 10 cm"
+      },
+      {
+        "label": "Color",
+        "value": "Natural Rattan Brown"
+      },
+      {
+        "label": "Craft",
+        "value": "Handwoven in Vietnam"
+      }
+    ]
+  },
+  "story": {
+    "eyebrow": "OUR STORY",
+    "headline": "Vietnamese Craftsmanship, Natural Living",
+    "body": "MAYTREDAN celebrates the beauty of Vietnamese weaving traditions through practical home essentials. We pair natural materials with thoughtful, understated design to bring warmth and character into modern living spaces."
+  },
+  "lifestyle": {
+    "heading": "The Small Details Make a Space Feel Like Home",
+    "body": "Style your coffee corner, dining table or afternoon tea setting with the relaxed charm of natural rattan."
+  },
+  "gifting": {
+    "heading": "A Thoughtful Gift for a Cozy Home",
+    "body": "A useful, decorative set for housewarmings, birthdays and everyday celebrations."
+  },
+  "care": {
+    "heading": "Simple Care for Natural Rattan",
+    "steps": [
+      "Gently wipe with a slightly damp cloth.",
+      "Do not soak or immerse in water.",
+      "Allow to dry completely before storing.",
+      "Keep in a clean, dry, well-ventilated place."
+    ]
+  },
+  "faq": [
+    {
+      "q": "What is included in the set?",
+      "a": "Six handmade rattan coasters and one matching holder."
+    },
+    {
+      "q": "How big is each coaster?",
+      "a": "Approximately 4 inches (10 cm) across. Because each piece is handwoven, slight variations may occur."
+    },
+    {
+      "q": "Are all coasters identical?",
+      "a": "Natural rattan and handmade weaving can result in subtle differences in shade and woven details."
+    },
+    {
+      "q": "How do I clean them?",
+      "a": "Gently wipe with a slightly damp cloth. Do not soak; let dry completely before storing."
+    },
+    {
+      "q": "Where are they made?",
+      "a": "Handwoven in Vietnam."
+    }
+  ],
+  "footer": {
+    "tagline": "Vietnamese Craftsmanship, Natural Living",
+    "copyright": "© MAYTREDAN. All rights reserved."
+  },
+  "seo": {
+    "title": "Handmade Rattan Coaster Set with Holder | MAYTREDAN",
+    "description": "Discover MAYTREDAN handwoven natural rattan coasters. A six-piece set with matching holder, crafted in Vietnam to bring warm, rustic style to your table.",
+    "keyword": "rattan coaster set"
+  },
+  "assetSlots": {
+    "logo": "assets/maytredan-logo-original.png",
+    "brandSymbol": "assets/maytredan-brand-symbol-512.png",
+    "favicon": "assets/favicon-64.png",
+    "heroImage": "REPLACE_WITH_EXISTING_HERO_IMAGE_PATH",
+    "galleryImages": [
+      "REPLACE_WITH_EXISTING_PRODUCT_IMAGE_PATHS"
+    ],
+    "craftImage": "REPLACE_WITH_EXISTING_CRAFT_IMAGE_IF_AVAILABLE",
+    "lifestyleImage": "REPLACE_WITH_EXISTING_LIFESTYLE_IMAGE_IF_AVAILABLE"
+  },
+  "doNotClaim": [
+    "waterproof",
+    "heatproof",
+    "mold-proof",
+    "certified eco-friendly",
+    "food-safe certified",
+    "guaranteed durability",
+    "free shipping",
+    "discount",
+    "limited stock",
+    "verified customer reviews",
+    "returns policy unless configured"
+  ]
+}

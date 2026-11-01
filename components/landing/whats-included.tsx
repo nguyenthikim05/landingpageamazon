@@ -1,45 +1,50 @@
+'use client'
+
 import Image from 'next/image'
 import { Check } from 'lucide-react'
-
-const items = [
-  { name: '01 Đai Hỗ Trợ Tư Thế VELNURIO', desc: 'Màu đen, lưới polyester thoáng khí & đệm mút vai' },
-  { name: '01 Túi Rút Bảo Quản Màu Navy', desc: 'Túi vải dây rút tiện lợi khi mang theo đi làm hoặc du lịch' },
-  { name: '01 Sổ Hướng Dẫn Sử Dụng Nhanh', desc: 'Quick Start Guide chi tiết các bước đeo và chọn size' },
-  { name: '01 Hộp Bán Lẻ Thương Hiệu VELNURIO', desc: 'Bao bì chuẩn bán lẻ cao cấp, chỉn chu và sang trọng' },
-]
+import { useLanguage } from './content-context'
 
 export function WhatsIncluded() {
+  const { t } = useLanguage()
+
   return (
-    <section id="trong-hop" className="scroll-mt-16 bg-white px-4 py-20 md:px-6 md:py-28">
+    <section id="set" className="scroll-mt-16 bg-white px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-12">
-        <div className="relative aspect-square overflow-hidden rounded-3xl bg-slate-50 p-4 ring-1 ring-slate-200/80 lg:col-span-6">
+        <div className="relative aspect-square overflow-hidden rounded-3xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4] lg:col-span-6">
           <Image
-            src="/images/velnurio/whats-included.webp"
-            alt="Trọn bộ sản phẩm trong hộp: đai VELNURIO, túi rút navy, sổ hướng dẫn và hộp đựng"
+            src="/images/maytredan/whats-included.png"
+            alt="MAYTREDAN What's Included: 1 Matching Holder and 6 Rattan Coasters"
             fill
             sizes="(min-width: 1024px) 540px, 90vw"
             className="object-contain"
           />
         </div>
         <div className="lg:col-span-6">
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-            Trọn Bộ Sản Phẩm Trong Hộp
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
+            {t.whatsIncluded.eyebrow}
+          </span>
+          <h2 className="mt-3 font-serif text-3xl font-extrabold tracking-tight text-[#35291F] md:text-4xl leading-[1.2]">
+            {t.whatsIncluded.heading.split('\n').map((line, i) => (
+              <span key={i} className="block">
+                {line}
+              </span>
+            ))}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
-            Mỗi bộ đai VELNURIO được đóng gói đồng bộ, chu đáo với phụ kiện bảo quản chuyên dụng sẵn sàng để bạn sử dụng ngay.
+          <p className="mt-4 text-base leading-relaxed text-[#6B5849] md:text-lg">
+            {t.whatsIncluded.description}
           </p>
           <div className="mt-8 flex flex-col gap-4">
-            {items.map((item) => (
+            {t.whatsIncluded.items.map((item) => (
               <div
                 key={item.name}
-                className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4"
+                className="flex items-start gap-3 rounded-2xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4]"
               >
-                <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-700">
+                <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[#EDE1D1] text-[#713B19]">
                   <Check className="size-4 stroke-[3]" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 md:text-base">{item.name}</h3>
-                  <p className="text-xs text-slate-500 md:text-sm">{item.desc}</p>
+                  <h3 className="font-serif text-sm font-bold text-[#35291F] md:text-base">{item.name}</h3>
+                  <p className="text-xs text-[#6B5849] md:text-sm">{item.desc}</p>
                 </div>
               </div>
             ))}

@@ -1,12 +1,23 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
+﻿@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
-  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-background: var(--brand-background);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-section-alt: var(--brand-section-alt);
+  --color-brand-text: var(--brand-text);
+  --color-brand-text-muted: var(--brand-text-muted);
+  --color-brand-border: var(--brand-border);
+  --color-brand-on-primary: var(--brand-on-primary);
+
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
   --color-turquoise: var(--turquoise);
@@ -40,28 +51,39 @@
 
 :root {
   color-scheme: light;
-  --navy: #0c1929;
-  --navy-foreground: #f8fafc;
-  --turquoise: #0284c7;
-  --cream: #f1f5f9;
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --card: #ffffff;
-  --card-foreground: #0f172a;
-  --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #0c1929;
-  --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0c1929;
-  --muted: #f8fafc;
-  --muted-foreground: #475569;
-  --accent: #0284c7;
-  --accent-foreground: #ffffff;
+  --brand-primary: #713B19;
+  --brand-primary-hover: #562C13;
+  --brand-accent: #D5AB75;
+  --brand-background: #FBF8F2;
+  --brand-surface: #FFFFFF;
+  --brand-section-alt: #EDE1D1;
+  --brand-text: #35291F;
+  --brand-text-muted: #6B5849;
+  --brand-border: #E3D5C4;
+  --brand-on-primary: #FFFFFF;
+
+  --navy: #713B19;
+  --navy-foreground: #FFFFFF;
+  --turquoise: #D5AB75;
+  --cream: #EDE1D1;
+  --background: #FBF8F2;
+  --foreground: #35291F;
+  --card: #FFFFFF;
+  --card-foreground: #35291F;
+  --popover: #FFFFFF;
+  --popover-foreground: #35291F;
+  --primary: #713B19;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EDE1D1;
+  --secondary-foreground: #35291F;
+  --muted: #EDE1D1;
+  --muted-foreground: #6B5849;
+  --accent: #D5AB75;
+  --accent-foreground: #35291F;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #e2e8f0;
-  --input: #cbd5e1;
-  --ring: #0284c7;
+  --border: #E3D5C4;
+  --input: #E3D5C4;
+  --ring: #713B19;
   --radius: 0.75rem;
 }
 
@@ -118,7 +140,7 @@
 
 .cta-outline:active {
   transform: translateY(1.5px) scale(0.96);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(113, 59, 25, 0.08);
 }
 
 /* Click ripple animation */
@@ -134,7 +156,7 @@
 .cta-ripple-dark {
   position: absolute;
   border-radius: 9999px;
-  background-color: rgba(2, 132, 199, 0.35);
+  background-color: rgba(213, 171, 117, 0.45);
   transform: scale(0);
   animation: cta-ripple-anim 0.45s ease-out forwards;
   pointer-events: none;

@@ -1,43 +1,37 @@
-import Image from 'next/image'
-import { AlertCircle, CheckCircle2 } from 'lucide-react'
+'use client'
 
-const steps = [
-  {
-    step: 'Bước 1',
-    title: 'Xỏ Quai Đeo',
-    desc: 'Xỏ hai tay vào quai đeo vai nhẹ nhàng như khi bạn đeo một chiếc ba lô thường ngày.',
-  },
-  {
-    step: 'Bước 2',
-    title: 'Căn Chỉnh Dây Đai',
-    desc: 'Kéo nhẹ hai quai đai phía trước sao cho đệm vai ôm êm ái, kéo nhẹ bờ vai về phía sau tự nhiên.',
-  },
-  {
-    step: 'Bước 3',
-    title: 'Dán Chắc Khóa Đai',
-    desc: 'Cố định phần khóa dán hook-and-loop phía trước sao cho vừa vặn với vòng thân người.',
-  },
-]
+import Image from 'next/image'
+import { AlertCircle } from 'lucide-react'
+import { useLanguage } from './content-context'
 
 export function HowToWear() {
+  const { t } = useLanguage()
+
   return (
-    <section id="huong-dan-mac" className="scroll-mt-16 bg-white px-4 py-20 md:px-6 md:py-28">
+    <section id="care" className="scroll-mt-16 bg-white px-4 py-20 text-[#35291F] md:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-            3 Bước Sử Dụng Đơn Giản
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
+            {t.care.eyebrow}
+          </span>
+          <h2 className="mt-3 font-serif text-3xl font-extrabold tracking-tight text-[#35291F] md:text-4xl leading-[1.2]">
+            {t.care.heading.split('\n').map((line, i) => (
+              <span key={i} className="block">
+                {line}
+              </span>
+            ))}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
-            Được thiết kế để bạn có thể tự mình mặc và điều chỉnh nhanh chóng chỉ trong vài giây, không cần người khác trợ giúp.
+          <p className="mt-4 text-base leading-relaxed text-[#6B5849] md:text-lg">
+            {t.care.description}
           </p>
         </div>
 
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-12">
           {/* Real image display */}
-          <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-slate-50 p-4 ring-1 ring-slate-200/80 lg:col-span-6">
+          <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4] lg:col-span-6">
             <Image
-              src="/images/velnurio/how-to-wear.webp"
-              alt="Minh họa 3 bước mặc đai VELNURIO: 1. Slip on, 2. Adjust straps, 3. Secure belt"
+              src="/images/maytredan/care-steps.png"
+              alt="MAYTREDAN product care guide: Place on table, set drinkware, wipe & dry, and store in holder"
               fill
               sizes="(min-width: 1024px) 540px, 90vw"
               className="object-contain"
@@ -47,14 +41,14 @@ export function HowToWear() {
           {/* Step explanations */}
           <div className="flex flex-col gap-8 lg:col-span-6 lg:pl-4">
             <div className="flex flex-col gap-6">
-              {steps.map((s) => (
+              {t.care.steps.map((s) => (
                 <div key={s.step} className="flex gap-4">
-                  <span className="flex h-8 shrink-0 items-center justify-center rounded-xl bg-sky-100 px-2.5 text-xs font-bold text-sky-800">
+                  <span className="flex h-8 shrink-0 items-center justify-center rounded-xl bg-[#EDE1D1] px-2.5 text-xs font-bold text-[#713B19]">
                     {s.step}
                   </span>
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900">{s.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-slate-600 md:text-base">
+                    <h3 className="font-serif text-lg font-bold text-[#35291F]">{s.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-[#6B5849] md:text-base">
                       {s.desc}
                     </p>
                   </div>
@@ -62,12 +56,12 @@ export function HowToWear() {
               ))}
             </div>
 
-            {/* Wear Caution box directly from official product spec */}
-            <div className="flex items-start gap-3 rounded-2xl bg-amber-50/80 p-5 ring-1 ring-amber-200/70">
-              <AlertCircle className="size-5 shrink-0 text-amber-700" aria-hidden="true" />
-              <div className="text-sm leading-relaxed text-amber-900">
-                <strong className="font-semibold">Lưu ý quan trọng từ VELNURIO:</strong>{' '}
-                Tuyệt đối không siết đai quá chặt (<em>Do not overtighten</em>). Đai hoạt động như một công cụ hỗ trợ và nhắc nhở tư thế tự nhiên; việc siết quá mức có thể gây khó chịu khi thở hoặc hạn chế tuần hoàn.
+            {/* Natural Craftsmanship Note */}
+            <div className="flex items-start gap-3 rounded-2xl bg-[#FBF8F2] p-5 ring-1 ring-[#E3D5C4]">
+              <AlertCircle className="size-5 shrink-0 text-[#713B19]" aria-hidden="true" />
+              <div className="text-sm leading-relaxed text-[#6B5849]">
+                <strong className="font-semibold text-[#35291F]">{t.care.noteTitle}</strong>{' '}
+                {t.care.noteDesc}
               </div>
             </div>
           </div>

@@ -1,23 +1,35 @@
+'use client'
+
 import Image from 'next/image'
+import { useLanguage } from './content-context'
 
 export function LifestyleBanner() {
+  const { t } = useLanguage()
+
   return (
     <section className="bg-white px-4 py-16 md:px-6 md:py-24">
-      <div className="relative mx-auto aspect-[4/5] max-w-6xl overflow-hidden rounded-3xl bg-slate-900 sm:aspect-[16/9]">
+      <div className="relative mx-auto aspect-[4/5] max-w-6xl overflow-hidden rounded-3xl bg-[#35291F] sm:aspect-[16/9]">
         <Image
-          src="/images/velnurio/lifestyle-work.webp"
-          alt="Người dùng đeo đai hỗ trợ tư thế VELNURIO khi ngồi làm việc bên laptop"
+          src="/images/maytredan/lifestyle-living.png"
+          alt="MAYTREDAN Natural Beauty for Everyday Living - Living room coffee table setting"
           fill
           sizes="(min-width: 1152px) 1152px, 100vw"
           className="object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-slate-950/65" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[#35291F]/65" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 p-6 text-white md:p-12">
-          <h2 className="max-w-2xl text-2xl font-bold leading-tight text-balance text-white md:text-4xl">
-            Đồng Hành Cùng Bạn Trong Từng Giờ Làm Việc & Học Tập
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#D5AB75]">
+            {t.lifestyle.eyebrow}
+          </span>
+          <h2 className="mt-2 max-w-2xl font-serif text-2xl font-bold leading-tight text-white md:text-4xl">
+            {t.lifestyle.heading.split('\n').map((line, i) => (
+              <span key={i} className="block">
+                {line}
+              </span>
+            ))}
           </h2>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-300 md:text-base">
-            Một giải pháp nhắc nhở tư thế công thái học kín đáo, êm dịu, giúp bạn duy trì phong thái thẳng thắn và tập trung suốt ngày dài.
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#EDE1D1] md:text-base">
+            {t.lifestyle.body}
           </p>
         </div>
       </div>
