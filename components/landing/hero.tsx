@@ -8,7 +8,7 @@ export function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative flex min-h-[100dvh] w-full items-center justify-center overflow-hidden bg-[#713B19] text-white pt-20 pb-12 md:py-0">
+    <section className="relative flex min-h-[100dvh] w-full items-center justify-center overflow-hidden bg-[#713B19] text-white pt-24 pb-12 md:pt-20 md:pb-8">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-8 px-4 md:grid-cols-2 md:gap-8 md:px-6 lg:gap-12 xl:max-w-7xl">
         <div className="flex flex-col justify-center">
           <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#D5AB75]">
