@@ -91,33 +91,35 @@ export function GalleryCarousel() {
           <p className="mx-auto mt-2 max-w-4xl text-balance text-base text-[#6B5849]">
             {t.gallery.description}
           </p>
-          <div className="mt-6 flex items-center justify-center gap-3">
-            <button
-              type="button"
-              onClick={() => scroll(-1)}
-              className="cta-btn flex size-11 items-center justify-center rounded-full bg-white text-[#35291F] ring-1 ring-[#E3D5C4] transition-colors hover:bg-[#713B19] hover:text-white active:scale-90 active:translate-y-0.5"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="size-5" aria-hidden="true" />
-            </button>
-            <button
-              type="button"
-              onClick={() => scroll(1)}
-              className="cta-btn flex size-11 items-center justify-center rounded-full bg-white text-[#35291F] ring-1 ring-[#E3D5C4] transition-colors hover:bg-[#713B19] hover:text-white active:scale-90 active:translate-y-0.5"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="size-5" aria-hidden="true" />
-            </button>
-          </div>
         </div>
 
         {/* Carousel Container - tự dừng khi hover / chạm */}
         <div
+          className="relative"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
         >
+          {/* Nút Prev bên trái ảnh */}
+          <button
+            type="button"
+            onClick={() => scroll(-1)}
+            aria-label="Previous slide"
+            className="cta-btn absolute -left-2 top-[38%] z-20 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#35291F] ring-1 ring-[#E3D5C4] transition-colors hover:bg-[#713B19] hover:text-white active:scale-90 active:translate-y-0.5 sm:-left-4 lg:-left-6"
+          >
+            <ChevronLeft className="size-6" aria-hidden="true" />
+          </button>
+
+          {/* Nút Next bên phải ảnh */}
+          <button
+            type="button"
+            onClick={() => scroll(1)}
+            aria-label="Next slide"
+            className="cta-btn absolute -right-2 top-[38%] z-20 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#35291F] ring-1 ring-[#E3D5C4] transition-colors hover:bg-[#713B19] hover:text-white active:scale-90 active:translate-y-0.5 sm:-right-4 lg:-right-6"
+          >
+            <ChevronRight className="size-6" aria-hidden="true" />
+          </button>
           <ul
             ref={trackRef}
             tabIndex={0}
