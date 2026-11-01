@@ -1,24 +1,85 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef } from 'react'
+import { useRef, useState, useEffect, useCallback } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLanguage } from './content-context'
 
 export function GalleryCarousel() {
   const { t } = useLanguage()
   const trackRef = useRef<HTMLUListElement>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
 
-  const scroll = (direction: 1 | -1) => {
+  const totalSlides = t.gallery.slides.length
+
+  const getStep = useCallback(() => {
+    const track = trackRef.current
+    if (!track) return 0
+    const item = track.querySelector('li')
+    return item ? item.getBoundingClientRect().width + 24 : track.clientWidth
+  }, [])
+
+  const scroll = useCallback(
+    (direction: 1 | -1) => {
+      const track = trackRef.current
+      if (!track) return
+      const step = getStep()
+      const maxScroll = track.scrollWidth - track.clientWidth
+
+      // Nếu đang ở cuối mà cuộn tiếp -> tự động quay về đầu
+      if (direction === 1 && track.scrollLeft >= maxScroll - 10) {
+        track.scrollTo({ left: 0, behavior: 'smooth' })
+      } else if (direction === -1 && track.scrollLeft <= 10) {
+        track.scrollTo({ left: maxScroll, behavior: 'smooth' })
+      } else {
+        track.scrollBy({ left: step * direction, behavior: 'smooth' })
+      }
+    },
+    [getStep]
+  )
+
+  const scrollToIndex = (index: number) => {
     const track = trackRef.current
     if (!track) return
-    const item = track.querySelector('li')
-    const step = item ? item.getBoundingClientRect().width + 24 : track.clientWidth
-    track.scrollBy({ left: step * direction, behavior: 'smooth' })
+    const step = getStep()
+    track.scrollTo({ left: step * index, behavior: 'smooth' })
+    setActiveIndex(index)
   }
 
+  // Cập nhật activeIndex khi cuộn
+  const handleScroll = () => {
+    const track = trackRef.current
+    if (!track) return
+    const step = getStep()
+    if (step > 0) {
+      const idx = Math.round(track.scrollLeft / step)
+      setActiveIndex(Math.min(Math.max(idx, 0), totalSlides - 1))
+    }
+  }
+
+  // Tự động chạy (Auto-play) mỗi 3.5 giây, tự tạm dừng khi rê chuột hoặc chạm
+  useEffect(() => {
+    if (isPaused) return
+
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return
+    }
+
+    const interval = setInterval(() => {
+      scroll(1)
+    }, 3500)
+
+    return () => clearInterval(interval)
+  }, [isPaused, scroll])
+
   return (
-    <section id="gallery" className="scroll-mt-16 bg-[#EDE1D1]/40 py-20 md:py-28" aria-roledescription="carousel" aria-label="Product Gallery">
+    <section
+      id="gallery"
+      className="scroll-mt-16 bg-[#EDE1D1]/40 py-20 md:py-28"
+      aria-roledescription="carousel"
+      aria-label="Product Gallery"
+    >
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-10 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
@@ -50,33 +111,57 @@ export function GalleryCarousel() {
           </div>
         </div>
 
-        <ul
-          ref={trackRef}
-          tabIndex={0}
-          aria-label="Product image list"
-          className="no-scrollbar flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 focus:outline-none"
+        {/* Carousel Container - tự dừng khi hover / chạm */}
+        <div
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
         >
-          {t.gallery.slides.map((slide) => (
-            <li
-              key={slide.title}
-              className="w-[82vw] shrink-0 snap-start sm:w-[360px] md:w-[420px]"
-            >
-              <div className="group relative aspect-square overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30">
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  fill
-                  sizes="(min-width: 768px) 420px, 82vw"
-                  className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
-                />
-              </div>
-              <div className="mt-4">
-                <h3 className="font-serif text-lg font-bold text-[#35291F]">{slide.title}</h3>
-                <p className="mt-1 text-sm text-[#6B5849]">{slide.desc}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+          <ul
+            ref={trackRef}
+            tabIndex={0}
+            onScroll={handleScroll}
+            aria-label="Product image list"
+            className="no-scrollbar flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 focus:outline-none"
+          >
+            {t.gallery.slides.map((slide) => (
+              <li
+                key={slide.title}
+                className="w-full shrink-0 snap-start sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+              >
+                <div className="group relative aspect-square overflow-hidden rounded-3xl bg-white p-3 sm:p-4 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30">
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    fill
+                    sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
+                  />
+                </div>
+                <div className="mt-4">
+                  <h3 className="font-serif text-lg font-bold text-[#35291F]">{slide.title}</h3>
+                  <p className="mt-1 text-sm text-[#6B5849]">{slide.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          {/* Dots Pagination */}
+          <div className="mt-6 flex items-center justify-center gap-2">
+            {t.gallery.slides.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => scrollToIndex(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                className={`h-2 rounded-full transition-[width,background-color] duration-300 ${
+                  activeIndex === idx ? 'w-6 bg-[#713B19]' : 'w-2 bg-[#D5AB75]/50 hover:bg-[#713B19]/50'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
