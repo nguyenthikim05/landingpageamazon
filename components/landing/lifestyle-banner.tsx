@@ -21,7 +21,7 @@ export function LifestyleBanner() {
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#D5AB75]">
             {t.lifestyle.eyebrow}
           </span>
-          <h2 className="mt-2 max-w-4xl font-serif text-xl font-bold leading-tight text-white sm:text-2xl md:text-3xl lg:text-4xl">
+          <h2 className="mt-2 max-w-4xl font-serif text-xl font-bold leading-tight text-white sm:text-2xl md:text-[28px] lg:text-[32px]">
             {t.lifestyle.heading}
           </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#EDE1D1] md:text-base">

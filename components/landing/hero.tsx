@@ -14,7 +14,7 @@ export function Hero() {
           <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#D5AB75]">
             {t.hero.eyebrow}
           </span>
-          <h1 className="mt-2.5 font-serif text-[26px] font-extrabold tracking-tight text-white xs:text-[28px] sm:text-3xl md:text-[32px] lg:text-[40px] xl:text-[46px] leading-[1.18]">
+          <h1 className="mt-2.5 font-serif text-[26px] font-extrabold tracking-tight text-white xs:text-[28px] sm:text-3xl md:text-[32px] lg:text-[36px] xl:text-[40px] leading-[1.2]">
             {t.hero.headline}
           </h1>
           <p className="mt-4 max-w-lg text-sm leading-relaxed text-[#EDE1D1] sm:text-base lg:text-lg">
