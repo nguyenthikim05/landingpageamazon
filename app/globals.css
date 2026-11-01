@@ -184,3 +184,10 @@
     display: none !important;
   }
 }
+
+/* Hide Next.js dev overlay button completely */
+[data-nextjs-dev-tools-button],
+nextjs-portal,
+#next-dev-tools-button {
+  display: none !important;
+}
