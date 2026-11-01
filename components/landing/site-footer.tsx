@@ -62,7 +62,11 @@ export function SiteFooter() {
             </div>
 
             <p className="mt-5 font-serif text-lg font-medium italic text-[#EDE1D1] leading-snug">
-              &ldquo;{f.slogan}&rdquo;
+              {f.slogan.split('\n').map((line, idx, arr) => (
+                <span key={idx} className="block">
+                  {idx === 0 ? '“' : ''}{line}{idx === arr.length - 1 ? '”' : ''}
+                </span>
+              ))}
             </p>
 
             <p className="mt-3 text-xs leading-relaxed text-[#EDE1D1]/75">

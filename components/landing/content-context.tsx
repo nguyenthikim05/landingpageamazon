@@ -424,7 +424,7 @@ export const contentEN: CoasterContent = {
   footer: {
     brandBio:
       'MAYTREDAN celebrates authentic Vietnamese rattan weaving traditions through mindful, practical home essentials. Each piece brings warm organic texture to everyday coffee and tea rituals.',
-    slogan: 'Vietnamese Craftsmanship · Natural Living',
+    slogan: 'Vietnamese Craftsmanship –\nNatural Living',
     contactTitle: 'Contact Information',
     address: 'Km10, Nguyen Trai, Ha Dong, Hanoi, Vietnam',
     phone: '0365865481',
@@ -604,7 +604,7 @@ export const contentVI: CoasterContent = {
     eyebrow: 'Hình Ảnh Thực Tế',
     heading: 'Bộ Sưu Tập Hình Ảnh Chân Thật',
     description:
-      'Khám phá chi tiết từng mối đan mây, quy cách đóng gói và bài trí thực tế của bộ lót ly MAYTREDAN.',
+      'Khám phá chi tiết từng mối đan mây, quy cách đóng gói và bài trí thực tế của bộ lót ly\u00A0MAYTREDAN.',
     slides: [
       {
         src: '/images/maytredan/hero.png',
@@ -728,7 +728,7 @@ export const contentVI: CoasterContent = {
   footer: {
     brandBio:
       'MAYTREDAN tôn vinh vẻ đẹp của nghề mây tre đan truyền thống Việt Nam qua những sản phẩm gia dụng tinh tế, mang lại nét mộc mạc và sự ấm áp cho từng khoảnh khắc thưởng trà, cà phê thường nhật.',
-    slogan: 'Tinh hoa thủ công Việt – Vẻ đẹp sống tự nhiên.',
+    slogan: 'Tinh hoa thủ công Việt –\nVẻ đẹp sống tự nhiên.',
     contactTitle: 'Thông Tin Liên Hệ',
     address: 'Km10, Nguyễn Trãi, Hà Đông, Hà Nội, Việt Nam',
     phone: '0365865481',

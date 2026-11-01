@@ -27,7 +27,7 @@ export function GalleryCarousel() {
           <h2 className="mt-2 font-serif text-3xl font-extrabold tracking-tight text-[#35291F] md:text-4xl">
             {t.gallery.heading}
           </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-base text-[#6B5849]">
+          <p className="mx-auto mt-2 max-w-4xl text-balance text-base text-[#6B5849]">
             {t.gallery.description}
           </p>
           <div className="mt-6 flex items-center justify-center gap-3">

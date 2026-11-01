@@ -9,11 +9,29 @@ export function SiteHeader() {
   const { lang, setLang, t } = useLanguage()
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState<string>('')
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40)
+
+      // Xác định mục đang hiển thị trên màn hình
+      const sectionIds = ['benefits', 'details', 'care', 'story', 'faq']
+      const scrollPosition = window.scrollY + 160
+
+      let current = ''
+      for (const id of sectionIds) {
+        const el = document.getElementById(id)
+        if (el) {
+          const top = el.offsetTop
+          if (scrollPosition >= top) {
+            current = id
+          }
+        }
+      }
+      setActiveSection(current)
     }
+
     window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
@@ -131,21 +149,39 @@ export function SiteHeader() {
 
           {/* Menu Điều hướng Desktop */}
           <nav aria-label="Main Navigation" className="hidden md:block">
-            <ul className="flex items-center gap-8">
-              {t.header.nav.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className={`font-serif text-sm font-semibold tracking-wide transition-colors duration-200 active:scale-95 inline-block py-1 ${
-                      isScrolled
-                        ? 'text-[#35291F] hover:text-[#713B19]'
-                        : 'text-[#EDE1D1]/90 hover:text-[#D5AB75]'
-                    }`}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+            <ul className="flex items-center gap-7 lg:gap-8">
+              {t.header.nav.map((link) => {
+                const targetId = link.href.replace('#', '')
+                const isActive = activeSection === targetId
+
+                return (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      onClick={() => setActiveSection(targetId)}
+                      className={`relative inline-block py-1.5 font-serif text-[16px] lg:text-[17px] tracking-wide transition-colors duration-200 active:scale-95 ${
+                        isActive
+                          ? isScrolled
+                            ? 'font-bold text-[#713B19]'
+                            : 'font-bold text-[#D5AB75]'
+                          : isScrolled
+                          ? 'font-medium text-[#35291F] hover:text-[#713B19]'
+                          : 'font-medium text-[#EDE1D1]/90 hover:text-white'
+                      }`}
+                    >
+                      {link.label}
+                      {/* Dấu gạch chân báo hiệu mục đang xem hoặc được click */}
+                      {isActive && (
+                        <span
+                          className={`absolute -bottom-1 left-0 right-0 h-[2.5px] rounded-full transition-colors duration-300 ${
+                            isScrolled ? 'bg-[#713B19]' : 'bg-[#D5AB75]'
+                          }`}
+                        />
+                      )}
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
 
@@ -189,21 +225,40 @@ export function SiteHeader() {
           }`}
         >
           <ul className="flex flex-col gap-4 text-base font-medium">
-            {t.header.nav.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block font-serif text-lg transition-colors ${
-                    isScrolled
-                      ? 'text-[#35291F] hover:text-[#713B19]'
-                      : 'text-[#EDE1D1] hover:text-[#D5AB75]'
-                  }`}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {t.header.nav.map((link) => {
+              const targetId = link.href.replace('#', '')
+              const isActive = activeSection === targetId
+
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={() => {
+                      setActiveSection(targetId)
+                      setMobileMenuOpen(false)
+                    }}
+                    className={`flex items-center justify-between py-1.5 font-serif text-lg transition-colors ${
+                      isActive
+                        ? isScrolled
+                          ? 'font-bold text-[#713B19]'
+                          : 'font-bold text-[#D5AB75]'
+                        : isScrolled
+                        ? 'text-[#35291F] hover:text-[#713B19]'
+                        : 'text-[#EDE1D1] hover:text-[#D5AB75]'
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                    {isActive && (
+                      <span
+                        className={`size-2 rounded-full ${
+                          isScrolled ? 'bg-[#713B19]' : 'bg-[#D5AB75]'
+                        }`}
+                      />
+                    )}
+                  </a>
+                </li>
+              )
+            })}
           </ul>
           <div className="mt-6 pt-4">
             <a

@@ -9,31 +9,35 @@ export function WhatsIncluded() {
 
   return (
     <section id="set" className="scroll-mt-16 bg-white px-4 py-20 md:px-6 md:py-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-12">
-        <div className="group relative aspect-square overflow-hidden rounded-3xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30 lg:col-span-5">
-          <Image
-            src="/images/maytredan/whats-included.png"
-            alt="MAYTREDAN What's Included: 1 Matching Holder and 6 Rattan Coasters"
-            fill
-            sizes="(min-width: 1024px) 460px, 90vw"
-            className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
-          />
+      <div className="mx-auto grid max-w-6xl items-stretch gap-10 lg:grid-cols-12 lg:gap-14">
+        <div className="group relative flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-[#FBF8F2] p-6 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30 aspect-square sm:aspect-[4/3] lg:aspect-auto lg:col-span-5 min-h-[460px]">
+          <div className="relative h-full min-h-[380px] w-full">
+            <Image
+              src="/images/maytredan/whats-included.png"
+              alt="MAYTREDAN What's Included: 1 Matching Holder and 6 Rattan Coasters"
+              fill
+              sizes="(min-width: 1024px) 460px, 90vw"
+              className="object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
+            />
+          </div>
         </div>
-        <div className="lg:col-span-7">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
-            {t.whatsIncluded.eyebrow}
-          </span>
-          <h2 className="mt-3 font-serif text-2xl font-extrabold tracking-tight text-[#35291F] sm:text-[28px] lg:text-[30px] xl:text-[34px] leading-[1.2]">
-            {t.whatsIncluded.heading}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#6B5849] md:text-lg">
-            {t.whatsIncluded.description}
-          </p>
-          <div className="mt-8 flex flex-col gap-4">
+        <div className="flex flex-col justify-between gap-6 lg:col-span-7">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">
+              {t.whatsIncluded.eyebrow}
+            </span>
+            <h2 className="mt-2 font-serif text-2xl font-extrabold tracking-tight text-[#35291F] sm:text-[28px] lg:text-[30px] xl:text-[34px] leading-[1.2]">
+              {t.whatsIncluded.heading}
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-[#6B5849]">
+              {t.whatsIncluded.description}
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
             {t.whatsIncluded.items.map((item) => (
               <div
                 key={item.name}
-                className="flex items-start gap-3 rounded-2xl bg-[#FBF8F2] p-4 ring-1 ring-[#E3D5C4]"
+                className="flex items-start gap-3 rounded-2xl bg-[#FBF8F2] p-3.5 ring-1 ring-[#E3D5C4]"
               >
                 <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[#EDE1D1] text-[#713B19]">
                   <Check className="size-4 stroke-[3]" aria-hidden="true" />
