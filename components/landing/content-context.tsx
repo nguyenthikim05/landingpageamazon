@@ -129,6 +129,7 @@ export interface CoasterContent {
     connectTitle: string
     facebookUrl: string
     instagramUrl: string
+    pinterestUrl: string
     xUrl: string
     amazonCardTitle: string
     amazonCardDesc: string
@@ -432,6 +433,7 @@ export const contentEN: CoasterContent = {
     connectTitle: 'Connect With MAYTREDAN',
     facebookUrl: 'https://www.facebook.com/profile.php?id=61593039274816',
     instagramUrl: 'https://www.instagram.com/maytredan_crafts/',
+    pinterestUrl: 'https://uk.pinterest.com/nguyenthikimthcstt/',
     xUrl: 'https://x.com/home',
     amazonCardTitle: 'Official Amazon Store',
     amazonCardDesc: 'Discover authentic MAYTREDAN products distributed through Amazon US.',
@@ -736,6 +738,7 @@ export const contentVI: CoasterContent = {
     connectTitle: 'Kết Nối Với MAYTREDAN',
     facebookUrl: 'https://www.facebook.com/profile.php?id=61593039274816',
     instagramUrl: 'https://www.instagram.com/maytredan_crafts/',
+    pinterestUrl: 'https://uk.pinterest.com/nguyenthikimthcstt/',
     xUrl: 'https://x.com/home',
     amazonCardTitle: 'Mua hàng chính hãng',
     amazonCardDesc: 'Khám phá sản phẩm MAYTREDAN được phân phối qua Amazon US.',
