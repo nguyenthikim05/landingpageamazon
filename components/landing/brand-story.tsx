@@ -3,13 +3,46 @@
 import Image from 'next/image'
 import { useLanguage } from './content-context'
 
+function StoryFoliage({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 400 400"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M420 -20 C320 60, 240 160, 180 260 C150 310, 120 370, 90 420"
+        stroke="currentColor"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        opacity="0.6"
+      />
+      <path d="M330 65 C300 40, 260 50, 240 75 C250 100, 290 100, 330 65Z" fill="currentColor" />
+      <path d="M290 105 C250 90, 215 110, 205 140 C225 155, 265 145, 290 105Z" fill="currentColor" />
+      <path d="M250 155 C210 135, 175 160, 170 190 C190 205, 225 190, 250 155Z" fill="currentColor" />
+      <path d="M220 205 C180 190, 150 220, 145 250 C165 260, 195 240, 220 205Z" fill="currentColor" />
+      <path d="M180 260 C145 250, 120 280, 115 310 C135 320, 160 300, 180 260Z" fill="currentColor" />
+    </svg>
+  )
+}
+
 export function BrandStory() {
   const { t } = useLanguage()
   const s = t.craftStory
 
   return (
-    <section id="story" className="scroll-mt-16 bg-[#FBF8F2] px-4 py-20 text-[#35291F] md:px-6 md:py-28">
-      <div className="mx-auto max-w-6xl">
+    <section id="story" className="relative overflow-hidden scroll-mt-16 bg-[#FBF8F2] px-4 py-20 text-[#35291F] md:px-6 md:py-28">
+      {/* Background Organic Leaf Silhouette */}
+      <div
+        className="pointer-events-none absolute -bottom-20 -right-20 z-0 h-[360px] w-[360px] text-[#713B19]/5 animate-foliage md:h-[480px] md:w-[480px]"
+        aria-hidden="true"
+      >
+        <StoryFoliage className="size-full rotate-180" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-6xl">
         {/* Header Block */}
         <div className="max-w-4xl">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">

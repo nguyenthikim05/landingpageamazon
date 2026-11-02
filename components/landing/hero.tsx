@@ -4,12 +4,85 @@ import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { useLanguage } from './content-context'
 
+function FoliageShadow({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 400 400"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M420 -20 C320 60, 240 160, 180 260 C150 310, 120 370, 90 420"
+        stroke="currentColor"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        opacity="0.6"
+      />
+      <path
+        d="M330 65 C300 40, 260 50, 240 75 C250 100, 290 100, 330 65Z"
+        fill="currentColor"
+      />
+      <path
+        d="M290 105 C250 90, 215 110, 205 140 C225 155, 265 145, 290 105Z"
+        fill="currentColor"
+      />
+      <path
+        d="M250 155 C210 135, 175 160, 170 190 C190 205, 225 190, 250 155Z"
+        fill="currentColor"
+      />
+      <path
+        d="M220 205 C180 190, 150 220, 145 250 C165 260, 195 240, 220 205Z"
+        fill="currentColor"
+      />
+      <path
+        d="M180 260 C145 250, 120 280, 115 310 C135 320, 160 300, 180 260Z"
+        fill="currentColor"
+      />
+      <path
+        d="M290 105 C340 120, 380 150, 410 190"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        opacity="0.5"
+      />
+      <path
+        d="M340 120 C370 115, 395 130, 400 150 C380 160, 355 150, 340 120Z"
+        fill="currentColor"
+      />
+      <path
+        d="M380 155 C410 160, 425 180, 425 205 C405 210, 385 190, 380 155Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
 export function Hero() {
   const { t } = useLanguage()
 
   return (
     <section className="relative flex min-h-[100dvh] w-full items-center justify-center overflow-hidden bg-[#713B19] text-white pt-24 pb-12 md:pt-20 md:pb-8">
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-8 px-4 md:grid-cols-2 md:gap-8 md:px-6 lg:gap-12 xl:max-w-7xl">
+      {/* 1. Ambient Warm Sunlight Drift */}
+      <div
+        className="pointer-events-none absolute -top-24 -right-24 h-[550px] w-[550px] rounded-full bg-[#D5AB75]/15 blur-[100px] animate-sun-drift"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -bottom-32 -left-20 h-[480px] w-[480px] rounded-full bg-[#3B2416]/50 blur-[90px]"
+        aria-hidden="true"
+      />
+
+      {/* 2. Gentle Foliage Shadow (Bóng lá tre/lá mây lay động chậm trong gió) */}
+      <div
+        className="pointer-events-none absolute -top-10 -right-10 z-0 h-[380px] w-[380px] text-black/15 animate-foliage sm:h-[480px] sm:w-[480px] md:h-[540px] md:w-[540px]"
+        aria-hidden="true"
+      >
+        <FoliageShadow className="size-full" />
+      </div>
+
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-8 px-4 md:grid-cols-2 md:gap-8 md:px-6 lg:gap-12 xl:max-w-7xl">
         <div className="flex flex-col justify-center">
           <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#D5AB75]">
             {t.hero.eyebrow}
