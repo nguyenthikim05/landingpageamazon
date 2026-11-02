@@ -21,9 +21,9 @@ export default function Page() {
         <LimitedOffer />
         <Features />
         <LifestyleBanner />
-        <HowToWear />
         <SizeGuide />
         <WhatsIncluded />
+        <HowToWear />
         <GalleryCarousel />
         <BrandStory />
         <FAQ />

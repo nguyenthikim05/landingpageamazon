@@ -8,7 +8,7 @@ export function HowToWear() {
   const { t } = useLanguage()
 
   return (
-    <section id="care" className="scroll-mt-16 bg-white px-4 py-20 text-[#35291F] md:px-6 md:py-28">
+    <section id="care" className="scroll-mt-16 bg-[#FBF8F2] px-4 py-20 text-[#35291F] md:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-4xl text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#713B19]">

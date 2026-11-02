@@ -15,9 +15,19 @@ export function SiteHeader() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40)
 
-      // Xác định mục đang hiển thị trên màn hình
+      if (window.scrollY < 200) {
+        setActiveSection('')
+        return
+      }
+
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60) {
+        setActiveSection('faq')
+        return
+      }
+
+      // Xác định mục đang hiển thị trên màn hình theo đúng thứ tự DOM
       const sectionIds = ['benefits', 'details', 'care', 'story', 'faq']
-      const scrollPosition = window.scrollY + 160
+      const scrollPosition = window.scrollY + 200
 
       let current = ''
       for (const id of sectionIds) {
