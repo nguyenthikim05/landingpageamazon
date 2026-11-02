@@ -10,16 +10,14 @@ export function WhatsIncluded() {
   return (
     <section id="set" className="scroll-mt-16 bg-white px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto grid max-w-6xl items-stretch gap-10 lg:grid-cols-12 lg:gap-14">
-        <div className="group relative flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-[#FBF8F2] p-6 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30 aspect-square sm:aspect-[4/3] lg:aspect-auto lg:col-span-5 min-h-[460px]">
-          <div className="relative h-full min-h-[380px] w-full">
-            <Image
-              src="/images/maytredan/whats-included.png"
-              alt="MAYTREDAN What's Included: 1 Matching Holder and 6 Rattan Coasters"
-              fill
-              sizes="(min-width: 1024px) 460px, 90vw"
-              className="object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
-            />
-          </div>
+        <div className="group relative overflow-hidden rounded-3xl bg-[#FBF8F2] ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30 aspect-square sm:aspect-[4/3] lg:aspect-auto lg:col-span-5 min-h-[460px]">
+          <Image
+            src="/images/maytredan/whats-included.png"
+            alt="MAYTREDAN What's Included: 1 Matching Holder and 6 Rattan Coasters"
+            fill
+            sizes="(min-width: 1024px) 460px, 90vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transform-none"
+          />
         </div>
         <div className="flex flex-col justify-between gap-6 lg:col-span-7">
           <div>
