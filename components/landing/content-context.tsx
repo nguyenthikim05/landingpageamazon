@@ -761,20 +761,26 @@ interface LanguageContextProps {
 }
 
 const LanguageContext = createContext<LanguageContextProps>({
-  lang: 'vi',
+  lang: 'en',
   setLang: () => {},
-  t: contentVI,
+  t: contentEN,
 })
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Language>('vi')
+  const [lang, setLangState] = useState<Language>('en')
 
   useEffect(() => {
     const saved = localStorage.getItem('maytredan_lang') as Language | null
     if (saved === 'en' || saved === 'vi') {
       setLangState(saved)
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = saved
+      }
     } else {
-      setLangState('vi')
+      setLangState('en')
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = 'en'
+      }
     }
   }, [])
 
@@ -782,6 +788,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLangState(newLang)
     try {
       localStorage.setItem('maytredan_lang', newLang)
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = newLang
+      }
     } catch {}
   }
 

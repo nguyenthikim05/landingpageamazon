@@ -5,9 +5,9 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
-  title: 'Bộ Lót Ly Mây Đan Thủ Công Kèm Khay Đựng | MAYTREDAN',
+  title: 'Handcrafted Natural Rattan Coasters with Matching Holder | MAYTREDAN',
   description:
-    'Khám phá bộ lót ly mây đan tự nhiên MAYTREDAN. Bộ 6 miếng lót ly kèm khay đựng đồng bộ, đan thủ công tại Việt Nam, mang vẻ đẹp mộc mạc và ấm áp cho không gian sống.',
+    'Discover MAYTREDAN authentic handmade natural rattan coaster set. Complete 7-piece set including 6 round coasters and 1 matching circular holder, handcrafted in Vietnam for warm everyday living.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'Bộ Lót Ly Mây Đan Thủ Công Kèm Khay Đựng | MAYTREDAN',
+    title: 'Handcrafted Natural Rattan Coasters with Matching Holder | MAYTREDAN',
     description:
-      'Mang nét mộc mạc tự nhiên và vẻ đẹp vượt thời gian vào từng khoảnh khắc thưởng trà, cà phê mỗi ngày với bộ 6 miếng lót ly mây đan thủ công và khay đựng đồng bộ.',
+      'Warm organic living essentials for coffee & tea rituals. 6 handwoven rattan coasters with matching circular holder made in Vietnam.',
     images: ['/images/maytredan/hero.png'],
   },
 }
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="vi">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

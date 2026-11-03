@@ -270,7 +270,34 @@ export function SiteHeader() {
               )
             })}
           </ul>
-          <div className="mt-6 pt-4">
+          <div className="mt-6 flex items-center justify-between pt-2">
+            <span className="text-sm font-medium opacity-80">
+              {lang === 'en' ? 'Language' : 'Ngôn ngữ'}
+            </span>
+            <div className="inline-flex items-center rounded-full bg-white/10 p-0.5 ring-1 ring-white/15 text-[11px] font-bold">
+              <button
+                type="button"
+                onClick={() => setLang('vi')}
+                className={`rounded-full px-3 py-1 transition-colors ${
+                  lang === 'vi' ? 'bg-[#D5AB75] text-[#35291F]' : 'text-inherit opacity-80 hover:opacity-100'
+                }`}
+                aria-label="Tiếng Việt"
+              >
+                VI
+              </button>
+              <button
+                type="button"
+                onClick={() => setLang('en')}
+                className={`rounded-full px-3 py-1 transition-colors ${
+                  lang === 'en' ? 'bg-[#D5AB75] text-[#35291F]' : 'text-inherit opacity-80 hover:opacity-100'
+                }`}
+                aria-label="English"
+              >
+                EN
+              </button>
+            </div>
+          </div>
+          <div className="mt-4">
             <a
               href="#shop"
               onClick={() => setMobileMenuOpen(false)}
