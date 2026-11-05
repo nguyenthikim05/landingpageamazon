@@ -191,7 +191,9 @@ export function SizeGuide() {
 
             <div className="mt-6">
               <a
-                href="#shop"
+                href={t.footer.amazonUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cta-btn flex h-12 w-full items-center justify-center rounded-full bg-[#713B19] text-sm font-semibold text-white transition-colors hover:bg-[#562C13] active:scale-95 active:translate-y-0.5"
               >
                 {t.dimensions.cta}

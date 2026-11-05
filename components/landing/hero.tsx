@@ -109,7 +109,9 @@ export function Hero() {
           </ul>
           <div className="mt-7 flex flex-wrap items-center gap-4 lg:mt-8">
             <a
-              href="#shop"
+              href={t.footer.amazonUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-btn inline-flex h-11 items-center justify-center rounded-full bg-[#D5AB75] px-7 text-xs font-bold text-[#35291F] transition-colors hover:bg-[#e2bb86] active:scale-95 active:translate-y-0.5 sm:h-12 sm:px-8 sm:text-sm"
             >
               {t.hero.primaryCTA}

@@ -198,7 +198,9 @@ export function SiteHeader() {
           {/* Nút Hành Động & Đặt Hàng bên phải */}
           <div className="hidden items-center gap-4 md:flex">
             <a
-              href="#shop"
+              href={t.footer.amazonUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`cta-btn inline-flex h-10 items-center justify-center rounded-full px-6 text-xs font-bold transition-colors active:scale-95 active:translate-y-0.5 ${
                 isScrolled
                   ? 'bg-[#713B19] text-[#FBF8F2] hover:bg-[#8B1D1D]'
@@ -299,7 +301,9 @@ export function SiteHeader() {
           </div>
           <div className="mt-4">
             <a
-              href="#shop"
+              href={t.footer.amazonUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="cta-btn flex h-11 w-full items-center justify-center rounded-full bg-[#D5AB75] text-sm font-bold text-[#35291F]"
             >
