@@ -32,7 +32,7 @@ export function LimitedOffer() {
 
         {/* Pricing Offer Card (Tone-shift #EDE1D1, No 1px hairlines, No static shadow) */}
         <div className="mx-auto mt-10 max-w-2xl rounded-3xl bg-[#EDE1D1]/60 p-6 sm:p-8 text-left">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 pb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
             <div>
               <span className="text-sm font-semibold text-[#713B19]">
                 {t.limitedOffer.cardBadge}
@@ -61,9 +61,6 @@ export function LimitedOffer() {
               </p>
             </div>
           </div>
-          <p className="mt-4 text-xs leading-relaxed text-[#6B5849]">
-            {t.limitedOffer.priceNote}
-          </p>
         </div>
 
         {/* Counter */}
