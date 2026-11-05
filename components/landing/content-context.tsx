@@ -211,7 +211,7 @@ export const contentEN: CoasterContent = {
     formContact: 'Email or phone number',
     formQty: 'Quantity (Sets)',
     formNote: 'Notes or consultation requests (optional)',
-    formSubmit: 'Pre-Order Now ($19.32)',
+    formSubmit: 'Pre-Order Now',
   },
   benefits: {
     eyebrow: 'Why MAYTREDAN',
@@ -531,7 +531,7 @@ export const contentVI: CoasterContent = {
     formContact: 'Số điện thoại hoặc Email',
     formQty: 'Số lượng bộ đặt trước',
     formNote: 'Ghi chú / Yêu cầu tư vấn thêm (tùy chọn)',
-    formSubmit: 'Đăng Ký Đặt Mua Trước ($19.32)',
+    formSubmit: 'Đăng Ký Đặt Mua Trước',
   },
   benefits: {
     eyebrow: 'Lý Do Chọn MAYTREDAN',

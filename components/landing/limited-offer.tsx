@@ -1,7 +1,7 @@
 'use client'
 
 import { useActionState, useState } from 'react'
-import { CheckCircle2, Loader2, Sparkles, Tag, ShieldCheck } from 'lucide-react'
+import { CheckCircle2, Loader2, Tag, ShieldCheck } from 'lucide-react'
 import { submitOrder, type OrderState } from '@/app/actions'
 import { Countdown } from './countdown'
 import { useLanguage } from './content-context'
@@ -161,10 +161,7 @@ export function LimitedOffer() {
                       <span>{lang === 'vi' ? 'Đang gửi thông tin...' : 'Recording your pre-order...'}</span>
                     </>
                   ) : (
-                    <>
-                      <Sparkles className="size-4" aria-hidden="true" />
-                      <span>{t.limitedOffer.formSubmit}</span>
-                    </>
+                    <span>{t.limitedOffer.formSubmit}</span>
                   )}
                 </button>
                 <p className="mt-3 flex items-center justify-center gap-1.5 text-[11px] text-[#6B5849]/80 text-center">
