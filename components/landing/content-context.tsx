@@ -191,12 +191,12 @@ export const contentEN: CoasterContent = {
     ],
   },
   limitedOffer: {
-    badge: 'SET OF 6 COASTERS + MATCHING HOLDER',
-    headline: 'Exclusive Launch Pre-Order Special',
+    badge: 'Exclusive Launch Pre-Order Special',
+    headline: 'Vietnamese Craftsmanship, Natural Living',
     subheadline:
       'Handcrafted from 100% natural Vietnamese rattan.\nReserve your set today to lock in the special launch price of $19.32 before retail release.',
     cardBadge: 'LIMITED LAUNCH OFFER',
-    cardTitle: 'Handmade Rattan Coaster Set (6 Coasters + 1 Holder)',
+    cardTitle: 'Handmade Rattan Coaster Set\n(6 Coasters + 1 Holder)',
     cardDesc: '100% natural honey-brown Vietnamese rattan, traditional circular spiral weave.',
     priceSale: '$19.32',
     priceRegular: '$23.00',
@@ -511,12 +511,12 @@ export const contentVI: CoasterContent = {
     ],
   },
   limitedOffer: {
-    badge: 'BỘ 6 LÓT LY + 1 KHAY ĐỰNG ĐỒNG BỘ',
-    headline: 'Ưu Đãi Đặt Mua Trước Mở Bán',
+    badge: 'Ưu Đãi Đặt Mua Trước Mở Bán',
+    headline: 'Tinh hoa thủ công Việt – Vẻ đẹp sống tự nhiên',
     subheadline:
       'Được đan hoàn toàn bằng tay từ 100% mây guột tự nhiên tại các làng nghề Việt Nam.\nĐăng ký đặt mua trước ngay hôm nay để nhận mức giá ưu đãi mở bán đặc biệt $19.32.',
     cardBadge: 'ƯU ĐÃI MỞ BÁN CÓ HẠN',
-    cardTitle: 'Bộ 6 Miếng Lót Ly Mây Kèm Khay Đựng Đồng Bộ',
+    cardTitle: 'Bộ Lót Ly Mây Đan Thủ Công\n(6 Miếng Lót + 1 Khay Đựng)',
     cardDesc: '100% mây guột tự nhiên Việt Nam, đan tay xoắn ốc tinh xảo, sắc nâu ấm cúng.',
     priceSale: '$19.32',
     priceRegular: '$23.00',

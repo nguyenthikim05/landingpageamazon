@@ -37,8 +37,12 @@ export function LimitedOffer() {
               <span className="text-sm font-semibold text-[#713B19]">
                 {t.limitedOffer.cardBadge}
               </span>
-              <h3 className="mt-2 font-serif text-xl font-bold text-[#35291F] sm:text-2xl">
-                {t.limitedOffer.cardTitle}
+              <h3 className="mt-2 font-serif text-xl font-bold text-[#35291F] sm:text-2xl leading-snug">
+                {t.limitedOffer.cardTitle.split('\n').map((line, i) => (
+                  <span key={i} className="block">
+                    {line}
+                  </span>
+                ))}
               </h3>
               <p className="mt-1 text-xs leading-relaxed text-[#6B5849]">
                 {t.limitedOffer.cardDesc}
