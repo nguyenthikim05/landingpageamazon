@@ -189,6 +189,18 @@ export function SizeGuide() {
               </div>
             </div>
 
+            <div className="mt-5 flex items-baseline justify-between rounded-2xl bg-[#EDE1D1]/40 px-4 py-3">
+              <div>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#713B19]">
+                  {lang === 'vi' ? 'Giá Sale Mở Bán' : 'Launch Sale Price'}
+                </span>
+                <p className="text-xs text-[#6B5849]">
+                  {lang === 'vi' ? 'Giá bán: $23' : 'Regular: $23'} · <span className="line-through">$39.00</span>
+                </p>
+              </div>
+              <span className="font-serif text-2xl font-black text-[#713B19]">$19.32</span>
+            </div>
+
             <div className="mt-6">
               <a
                 href={t.footer.amazonUrl}

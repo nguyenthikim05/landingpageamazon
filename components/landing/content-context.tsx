@@ -17,18 +17,33 @@ export interface CoasterContent {
     primaryCTA: string
     secondaryCTA: string
     price: string
+    launchPrice: string
+    regularPrice: string
+    listPrice: string
+    saleBadge: string
+    saleLabel: string
     highlights: string[]
   }
   limitedOffer: {
     badge: string
     headline: string
     subheadline: string
+    cardBadge: string
+    cardTitle: string
+    cardDesc: string
+    priceSale: string
+    priceRegular: string
+    priceList: string
+    saveBadge: string
+    priceNote: string
     days: string
     hours: string
     mins: string
     secs: string
     formName: string
     formContact: string
+    formQty: string
+    formNote: string
     formSubmit: string
   }
   benefits: {
@@ -163,7 +178,12 @@ export const contentEN: CoasterContent = {
       'Bring natural texture and timeless charm to everyday coffee and tea moments with a set of six handwoven rattan coasters and a matching holder.',
     primaryCTA: 'Shop Now',
     secondaryCTA: 'Discover Our Craft',
-    price: '',
+    price: '$19.32',
+    launchPrice: '$19.32',
+    regularPrice: '$23',
+    listPrice: '$39',
+    saleBadge: '50% OFF',
+    saleLabel: 'Launch Sale Special',
     highlights: [
       '100% natural rattan with warm honey-brown tones',
       'Complete set: 6 handwoven coasters + 1 matching holder',
@@ -172,16 +192,26 @@ export const contentEN: CoasterContent = {
   },
   limitedOffer: {
     badge: 'SET OF 6 COASTERS + MATCHING HOLDER',
-    headline: 'Vietnamese Craftsmanship, Natural Living',
+    headline: 'Exclusive Launch Pre-Order Special',
     subheadline:
-      'Handwoven from 100% natural Vietnamese rattan.\nReserve your set today with direct inquiry, or check back for live Amazon availability.',
+      'Handcrafted from 100% natural Vietnamese rattan.\nReserve your set today to lock in the special launch price of $19.32 before retail release.',
+    cardBadge: 'LIMITED LAUNCH OFFER',
+    cardTitle: 'Handmade Rattan Coaster Set (6 Coasters + 1 Holder)',
+    cardDesc: '100% natural honey-brown Vietnamese rattan, traditional circular spiral weave.',
+    priceSale: '$19.32',
+    priceRegular: '$23.00',
+    priceList: '$39.00',
+    saveBadge: 'Save 50%',
+    priceNote: 'Regular Price: $23.00 · Save 50% vs $39.00 List Price',
     days: 'Days',
     hours: 'Hours',
     mins: 'Mins',
     secs: 'Secs',
     formName: 'Your full name',
     formContact: 'Email or phone number',
-    formSubmit: 'Order Inquiries',
+    formQty: 'Quantity (Sets)',
+    formNote: 'Notes or consultation requests (optional)',
+    formSubmit: 'Pre-Order Now ($19.32)',
   },
   benefits: {
     eyebrow: 'Why MAYTREDAN',
@@ -468,7 +498,12 @@ export const contentVI: CoasterContent = {
       'Mang nét mộc mạc tự nhiên và vẻ đẹp vượt thời gian vào từng khoảnh khắc thưởng trà, cà phê mỗi ngày với bộ sáu miếng lót ly mây đan thủ công kèm khay đựng đồng bộ.',
     primaryCTA: 'Đặt Mua Ngay',
     secondaryCTA: 'Khám Phá Nghề Mây Tre Đan',
-    price: '',
+    price: '$19.32',
+    launchPrice: '$19.32',
+    regularPrice: '$23',
+    listPrice: '$39',
+    saleBadge: 'GIẢM 50%',
+    saleLabel: 'Giá Sale Mở Bán',
     highlights: [
       '100% mây guột tự nhiên với sắc nâu mật ong ấm cúng',
       'Trọn bộ tiện dụng: 6 miếng lót ly + 1 khay đựng tròn đồng bộ',
@@ -477,16 +512,26 @@ export const contentVI: CoasterContent = {
   },
   limitedOffer: {
     badge: 'BỘ 6 LÓT LY + 1 KHAY ĐỰNG ĐỒNG BỘ',
-    headline: 'Tinh hoa thủ công Việt – Vẻ đẹp sống tự nhiên.',
+    headline: 'Ưu Đãi Đặt Mua Trước Mở Bán',
     subheadline:
-      'Được đan hoàn toàn bằng tay từ 100% mây tự nhiên tại các làng nghề Việt Nam.\nĐăng ký giữ bộ sản phẩm hoặc nhận thông báo mở bán chính thức.',
+      'Được đan hoàn toàn bằng tay từ 100% mây guột tự nhiên tại các làng nghề Việt Nam.\nĐăng ký đặt mua trước ngay hôm nay để nhận mức giá ưu đãi mở bán đặc biệt $19.32.',
+    cardBadge: 'ƯU ĐÃI MỞ BÁN CÓ HẠN',
+    cardTitle: 'Bộ 6 Miếng Lót Ly Mây Kèm Khay Đựng Đồng Bộ',
+    cardDesc: '100% mây guột tự nhiên Việt Nam, đan tay xoắn ốc tinh xảo, sắc nâu ấm cúng.',
+    priceSale: '$19.32',
+    priceRegular: '$23.00',
+    priceList: '$39.00',
+    saveBadge: 'Tiết kiệm 50%',
+    priceNote: 'Giá bán chuẩn: $23.00 · Tiết kiệm 50% so với giá gạch niêm yết $39.00',
     days: 'Ngày',
     hours: 'Giờ',
     mins: 'Phút',
     secs: 'Giây',
     formName: 'Họ và tên của bạn',
     formContact: 'Số điện thoại hoặc Email',
-    formSubmit: 'Đăng Ký Đặt Hàng',
+    formQty: 'Số lượng bộ đặt trước',
+    formNote: 'Ghi chú / Yêu cầu tư vấn thêm (tùy chọn)',
+    formSubmit: 'Đăng Ký Đặt Mua Trước ($19.32)',
   },
   benefits: {
     eyebrow: 'Lý Do Chọn MAYTREDAN',

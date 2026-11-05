@@ -60,7 +60,7 @@ function FoliageShadow({ className }: { className?: string }) {
 }
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { lang, t } = useLanguage()
 
   return (
     <section className="relative flex min-h-[100dvh] w-full items-center justify-center overflow-hidden bg-[#713B19] text-white pt-24 pb-12 md:pt-20 md:pb-8">
@@ -107,6 +107,27 @@ export function Hero() {
               </li>
             ))}
           </ul>
+
+          {/* Pricing Highlight */}
+          <div className="mt-6 flex flex-wrap items-baseline gap-3">
+            <span className="font-serif text-3xl font-extrabold text-[#D5AB75] tracking-tight sm:text-4xl">
+              {t.hero.launchPrice}
+            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#D5AB75]">
+                {t.hero.saleLabel}
+              </span>
+              <div className="mt-0.5 flex items-center gap-2 text-xs text-[#EDE1D1]/85">
+                <span>{lang === 'vi' ? 'Giá bán' : 'Reg.'} {t.hero.regularPrice}</span>
+                <span>·</span>
+                <span className="line-through text-[#EDE1D1]/55">{t.hero.listPrice}</span>
+                <span className="rounded-full bg-[#D5AB75]/25 px-2 py-0.5 text-[10px] font-bold text-[#D5AB75]">
+                  {t.hero.saleBadge}
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-7 flex flex-wrap items-center gap-4 lg:mt-8">
             <a
               href={t.footer.amazonUrl}
