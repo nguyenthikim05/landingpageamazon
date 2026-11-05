@@ -25,13 +25,8 @@ export async function submitOrder(_prev: OrderState, formData: FormData): Promis
   const formPayload = new URLSearchParams()
   formPayload.append('entry.1010751395', name)
   formPayload.append('entry.220478753', contact)
-  formPayload.append('entry.1361136669', `${quantity} bộ (Giá ưu đãi mở bán: $19.32)`)
-  formPayload.append(
-    'entry.1770700990',
-    note
-      ? `${note} | [Landing Page MAYTREDAN - Giá mở bán: $19.32, Giá gốc $23, Giá gạch $39]`
-      : '[Landing Page MAYTREDAN - Khách đặt trước giá mở bán: $19.32]'
-  )
+  formPayload.append('entry.1361136669', `${quantity} bộ`)
+  formPayload.append('entry.1770700990', note)
 
   try {
     const controller = new AbortController()
