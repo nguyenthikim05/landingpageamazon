@@ -42,7 +42,7 @@ export function SizeGuide() {
           </p>
         </div>
 
-        <div className="mt-14 grid items-center gap-12 lg:grid-cols-12">
+        <div className="mt-14 grid items-stretch gap-12 lg:grid-cols-12">
           {/* Real image display */}
           <div className="group relative aspect-square w-full overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-[#E3D5C4] transition-colors duration-500 hover:ring-[#713B19]/30 lg:col-span-6">
             <Image
@@ -55,7 +55,7 @@ export function SizeGuide() {
           </div>
 
           {/* Interactive Calculator */}
-          <div className="flex flex-col rounded-3xl bg-white p-6 ring-1 ring-[#E3D5C4] sm:p-8 lg:col-span-6">
+          <div className="flex h-full flex-col justify-between rounded-3xl bg-white p-6 ring-1 ring-[#E3D5C4] sm:p-8 lg:col-span-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-[#35291F]">
                 <Ruler className="size-5 text-[#713B19]" aria-hidden="true" />
