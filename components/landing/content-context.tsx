@@ -470,7 +470,7 @@ export const contentEN: CoasterContent = {
     amazonCTA: 'Shop on Amazon US',
     amazonCardNote:
       'Orders, shipping, and returns are fulfilled under standard Amazon terms.',
-    amazonUrl: 'https://www.amazon.com',
+    amazonUrl: 'https://www.amazon.com/dp/B0HQ6VRHNS',
     copyright: '© 2026 MAYTREDAN. All rights reserved.',
     privacy: 'Privacy Policy',
     terms: 'Terms of Service',
@@ -790,7 +790,7 @@ export const contentVI: CoasterContent = {
     amazonCTA: 'Mua hàng trên Amazon US',
     amazonCardNote:
       'Đơn hàng, vận chuyển và đổi trả được xử lý theo các điều kiện áp dụng trên Amazon.',
-    amazonUrl: 'https://www.amazon.com',
+    amazonUrl: 'https://www.amazon.com/dp/B0HQ6VRHNS',
     copyright: '© 2026 MAYTREDAN. Bảo lưu mọi quyền.',
     privacy: 'Chính sách bảo mật',
     terms: 'Điều khoản dịch vụ',
